@@ -1,0 +1,1209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Hillway — AI Embed &amp; Workflow Automation Proposal — Commercial
+      Property Rotherham
+    </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #000000;
+        --dark: #1a1a1a;
+        --gray: #333333;
+        --mid-gray: #666666;
+        --light-gray: #999999;
+        --bg-light: #f5f5f5;
+        --white: #ffffff;
+        --accent: #0066ff;
+        --accent-light: #e6f0ff;
+        --green: #059669;
+        --green-light: #ecfdf5;
+        --amber: #d97706;
+        --amber-light: #fffbeb;
+        --red: #e11d48;
+        --red-light: #fff1f2;
+        --indigo: #6366f1;
+        --indigo-light: #eef2ff;
+        --teal: #0d4f4f;
+        --teal-light: #f0fdfa;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        font-size: 11pt;
+        line-height: 1.6;
+        color: var(--gray);
+        background: var(--white);
+      }
+
+      @media print {
+        body {
+          font-size: 10pt;
+        }
+        .page-break {
+          page-break-before: always;
+        }
+        .no-print {
+          display: none;
+        }
+        @page {
+          margin: 15mm 20mm;
+        }
+        .cover {
+          page-break-after: always;
+        }
+      }
+
+      /* Cover */
+      .cover {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 60px;
+        background: var(--primary);
+        color: var(--white);
+      }
+      .cover-logo {
+        width: 200px;
+      }
+      .cover-title {
+        margin-top: auto;
+      }
+      .cover-title h1 {
+        font-family: "Tenor Sans", serif;
+        font-size: 42pt;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        margin-bottom: 20px;
+      }
+      .cover-title .subtitle {
+        font-size: 16pt;
+        font-weight: 300;
+        color: #999;
+        margin-bottom: 40px;
+      }
+      .cover-meta {
+        display: flex;
+        gap: 60px;
+        font-size: 10pt;
+        color: #999;
+        margin-top: auto;
+        padding-top: 40px;
+        border-top: 1px solid #333;
+      }
+      .cover-meta div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .cover-meta .label {
+        font-size: 8pt;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #666;
+      }
+      .cover-meta .value {
+        color: #ccc;
+      }
+
+      /* Content */
+      .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 60px 40px;
+      }
+      .section {
+        margin-bottom: 50px;
+      }
+      .section-number {
+        font-family: "Tenor Sans", serif;
+        font-size: 11pt;
+        color: var(--accent);
+        margin-bottom: 8px;
+        letter-spacing: 2px;
+      }
+      h2 {
+        font-family: "Tenor Sans", serif;
+        font-size: 22pt;
+        font-weight: 400;
+        color: var(--primary);
+        margin-bottom: 20px;
+        line-height: 1.3;
+      }
+      h3 {
+        font-family: "Inter", sans-serif;
+        font-size: 13pt;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 12px;
+        margin-top: 30px;
+      }
+      p {
+        margin-bottom: 14px;
+        color: var(--gray);
+      }
+      .lead {
+        font-size: 13pt;
+        font-weight: 300;
+        line-height: 1.7;
+        color: var(--mid-gray);
+        margin-bottom: 30px;
+      }
+
+      /* Insight cards */
+      .insight-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin: 24px 0;
+      }
+      .insight-card {
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 3px solid;
+      }
+      .insight-card.lease {
+        background: var(--accent-light);
+        border-color: var(--accent);
+      }
+      .insight-card.service {
+        background: var(--green-light);
+        border-color: var(--green);
+      }
+      .insight-card.insurance {
+        background: var(--amber-light);
+        border-color: var(--amber);
+      }
+      .insight-card.asset {
+        background: var(--indigo-light);
+        border-color: var(--indigo);
+      }
+      .insight-card.fire {
+        background: var(--red-light);
+        border-color: var(--red);
+      }
+      .insight-card.bc {
+        background: var(--teal-light);
+        border-color: var(--teal);
+      }
+      .insight-card h4 {
+        font-size: 10pt;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--primary);
+      }
+      .insight-card p {
+        font-size: 9.5pt;
+        margin-bottom: 0;
+        color: var(--mid-gray);
+      }
+
+      /* Workstream cards */
+      .workstream {
+        padding: 24px;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        margin-bottom: 16px;
+      }
+      .workstream-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .ws-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 8pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: white;
+      }
+      .ws-badge.ws1 {
+        background: var(--accent);
+      }
+      .ws-badge.ws2 {
+        background: var(--green);
+      }
+      .ws-badge.ws3 {
+        background: var(--indigo);
+      }
+      .ws-badge.ws4 {
+        background: var(--amber);
+      }
+      .workstream h4 {
+        font-size: 13pt;
+        font-weight: 600;
+        color: var(--primary);
+      }
+      .workstream ul {
+        margin-left: 20px;
+        color: var(--mid-gray);
+      }
+      .workstream li {
+        margin-bottom: 6px;
+        font-size: 10pt;
+      }
+
+      /* Pricing */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+        margin: 30px 0;
+      }
+      .pricing-card {
+        padding: 30px;
+        border: 2px solid #e5e5e5;
+        border-radius: 12px;
+        position: relative;
+      }
+      .pricing-card.recommended {
+        border-color: var(--accent);
+      }
+      .pricing-card.recommended::before {
+        content: "RECOMMENDED";
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        background: var(--accent);
+        color: white;
+        padding: 2px 12px;
+        border-radius: 4px;
+        font-size: 8pt;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .pricing-card .option-name {
+        font-size: 9pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--mid-gray);
+        margin-bottom: 8px;
+      }
+      .pricing-card .price {
+        font-family: "Tenor Sans", serif;
+        font-size: 24pt;
+        color: var(--primary);
+        margin-bottom: 4px;
+      }
+      .pricing-card .price-note {
+        font-size: 9pt;
+        color: var(--light-gray);
+        margin-bottom: 20px;
+      }
+      .pricing-card ul {
+        list-style: none;
+        padding: 0;
+      }
+      .pricing-card li {
+        padding: 6px 0;
+        font-size: 10pt;
+        color: var(--mid-gray);
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .pricing-card li:last-child {
+        border-bottom: none;
+      }
+      .pricing-card li::before {
+        content: "\2713";
+        margin-right: 8px;
+        color: var(--green);
+        font-weight: 600;
+      }
+
+      /* Deliverables */
+      .deliverable-list {
+        margin: 20px 0;
+      }
+      .deliverable-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .deliverable-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: var(--accent-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--accent);
+        flex-shrink: 0;
+      }
+      .deliverable-item h4 {
+        font-size: 11pt;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 2px;
+      }
+      .deliverable-item p {
+        font-size: 9.5pt;
+        color: var(--mid-gray);
+        margin-bottom: 0;
+      }
+
+      /* Team */
+      .team-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin: 20px 0;
+      }
+      .team-card {
+        text-align: center;
+        padding: 24px 16px;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+      }
+      .team-card .name {
+        font-size: 12pt;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 4px;
+      }
+      .team-card .role {
+        font-size: 9pt;
+        color: var(--mid-gray);
+      }
+      .team-photo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 12px;
+      }
+
+      /* Coordination */
+      .coord-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin: 20px 0;
+      }
+      .coord-card {
+        padding: 20px;
+        background: var(--bg-light);
+        border-radius: 8px;
+      }
+      .coord-card h4 {
+        font-size: 10pt;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 4px;
+      }
+      .coord-card .firm {
+        font-size: 9pt;
+        color: var(--accent);
+        margin-bottom: 8px;
+      }
+      .coord-card p {
+        font-size: 9.5pt;
+        color: var(--mid-gray);
+        margin-bottom: 0;
+      }
+
+      .page-footer {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 1px solid #e5e5e5;
+        display: flex;
+        justify-content: space-between;
+        font-size: 8pt;
+        color: var(--light-gray);
+      }
+
+      .cta-box {
+        background: var(--primary);
+        color: var(--white);
+        padding: 40px;
+        border-radius: 12px;
+        margin: 40px 0;
+      }
+      .cta-box h3 {
+        font-family: "Tenor Sans", serif;
+        font-size: 18pt;
+        font-weight: 400;
+        color: var(--white);
+        margin-bottom: 16px;
+        margin-top: 0;
+      }
+      .cta-box p {
+        color: #ccc;
+        margin-bottom: 8px;
+      }
+      .cta-box .contact-line {
+        color: #999;
+        font-size: 10pt;
+      }
+
+      .separator {
+        height: 1px;
+        background: #e5e5e5;
+        margin: 40px 0;
+      }
+
+      ul.clean {
+        list-style: none;
+        padding: 0;
+      }
+      ul.clean li {
+        padding: 4px 0 4px 16px;
+        position: relative;
+        font-size: 10.5pt;
+      }
+      ul.clean li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      .confidential {
+        text-align: center;
+        font-size: 8pt;
+        color: var(--light-gray);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 40px;
+      }
+
+      .hybrid-box {
+        background: var(--accent-light);
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        padding: 24px;
+        margin: 24px 0;
+      }
+      .hybrid-box h4 {
+        font-size: 11pt;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 8px;
+      }
+      .hybrid-box p {
+        font-size: 10pt;
+        color: var(--mid-gray);
+        margin-bottom: 0;
+      }
+
+      .timeline {
+        margin: 24px 0;
+        padding: 0;
+        list-style: none;
+      }
+      .timeline li {
+        padding: 14px 0 14px 28px;
+        border-left: 2px solid var(--accent);
+        margin-left: 8px;
+        position: relative;
+        font-size: 10pt;
+      }
+      .timeline li::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: 18px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+      .timeline li strong {
+        display: block;
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 10.5pt;
+        margin-bottom: 2px;
+      }
+      .timeline li span {
+        color: var(--mid-gray);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- COVER -->
+    <div class="cover">
+      <img src="logo.png" alt="Hillway" class="cover-logo" />
+
+      <div class="cover-title">
+        <h1>AI Embed &amp; Workflow Automation Proposal</h1>
+        <div class="subtitle">
+          Commercial Property Rotherham &mdash; Neil Keally
+        </div>
+      </div>
+
+      <div class="cover-meta">
+        <div>
+          <span class="label">Prepared for</span>
+          <span class="value">Neil Keally MRICS</span>
+        </div>
+        <div>
+          <span class="label">Date</span>
+          <span class="value">7 May 2026</span>
+        </div>
+        <div>
+          <span class="label">Reference</span>
+          <span class="value">HPC/2026/CPR-001</span>
+        </div>
+        <div>
+          <span class="label">Prepared by</span>
+          <span class="value"
+            >Matt Fitzgerald MRICS<br />Jamie Smyth MRICS</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 1: INTRO + WHAT WE UNDERSTAND -->
+    <div class="content page-break">
+      <div class="section">
+        <div class="section-number">01</div>
+        <h2>Introduction</h2>
+        <p class="lead">
+          Following our meeting at your office on Wednesday 29 April with you,
+          Lisa and Nikki, this proposal sets out how Hillway will embed
+          Claude-based AI into Commercial Property Rotherham, automate the
+          workflows that consume the most time in your week, and leave you with
+          a tech stack you and your team can run yourselves.
+        </p>
+
+        <p>
+          You asked us to come back with the costs to get onboarded. What
+          follows is a structured three-month engagement, the workflows we would
+          prioritise, the deliverables you would have at the end, and three
+          commercial options for how the work continues from month four onwards.
+        </p>
+
+        <p>
+          We are not selling software. Claude itself is widely available and
+          relatively inexpensive at the seat level. The value we bring is the
+          implementation experience, the integration of your existing tools
+          (Xero, Microsoft 365, Rightmove and the rest), and the property-
+          specific frameworks we have already built &mdash; tested daily across
+          our own business and rolled out to clients ranging from three-person
+          firms to a national managing agent with 400 staff.
+        </p>
+
+        <p>
+          The aim is straightforward: free Lisa&rsquo;s workload before she
+          leaves, give Nikki a system she can rely on, and give you the capacity
+          to take on more instructions without taking on more cost.
+        </p>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="section">
+        <div class="section-number">02</div>
+        <h2>What We Understand</h2>
+        <p class="lead">
+          Six themes emerged from the meeting where AI will deliver immediate,
+          measurable time savings.
+        </p>
+
+        <div class="insight-grid">
+          <div class="insight-card fire">
+            <h4>Lisa&rsquo;s Departure (Operational Risk)</h4>
+            <p>
+              Lisa has handed in her notice. With the right setup, much of the
+              manual work she carries today can be automated before she leaves
+              &mdash; but the window is tight. Capturing her processes while she
+              is still on the team is the priority of the first six weeks.
+            </p>
+          </div>
+          <div class="insight-card service">
+            <h4>Invoicing</h4>
+            <p>
+              Lisa described the current process &mdash; a Word template edited
+              each month or quarter, exported to PDF, attached to an email, sent
+              client by client. Across hundreds of invoices a cycle, this is
+              where most of her time goes. A connected Xero + Claude flow can
+              produce, check and dispatch the same invoices in minutes rather
+              than days.
+            </p>
+          </div>
+          <div class="insight-card lease">
+            <h4>Cash-In Reconciliation</h4>
+            <p>
+              Money arrives, then has to be recorded against the transaction
+              record, the rent statement, and a separate Excel sheet per client.
+              Lisa rechecks every figure repeatedly because the process is
+              manual and error-prone. Bank-feed-driven reconciliation through
+              Xero, with branded client statements produced automatically,
+              removes most of that double-handling.
+            </p>
+          </div>
+          <div class="insight-card insurance">
+            <h4>Compliance Tracking</h4>
+            <p>
+              EICR, gas, EPC and other compliance certificates currently sit in
+              emails and folders. Nikki is working through them manually,
+              ticking dates on a list. Claude can read every certificate in your
+              inbox and drive, extract the expiry dates, populate a dashboard,
+              and add reminders to the calendar at three-month, one-month and
+              one-week intervals.
+            </p>
+          </div>
+          <div class="insight-card asset">
+            <h4>Lease, Valuation &amp; Marketing Reports</h4>
+            <p>
+              Lease abstracts, valuation reports, and marketing brochures are
+              still produced largely by hand. With your data structured the
+              right way, Claude can pull lease terms, comparables, VOA, EPC and
+              planning data, and produce branded first drafts. You and Neil keep
+              the professional judgement; the assembly work disappears.
+            </p>
+          </div>
+          <div class="insight-card bc">
+            <h4>Rightmove &amp; Brochure Workflow</h4>
+            <p>
+              PowerPoint brochures and Rightmove uploads are currently a manual
+              back-end task. Until a Rightmove MCP exists, browser automation
+              can populate the listing back-end from your data; brochure
+              production can be templated and produced in seconds. Your Burgess
+              Commercial legacy agent ID is still showing on Rightmove &mdash;
+              worth resolving as part of the work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 2: SCOPE OF WORK -->
+    <div class="content page-break">
+      <div class="section">
+        <div class="section-number">03</div>
+        <h2>Scope of Work</h2>
+        <p class="lead">
+          A three-month embedded engagement, structured in three phases, with
+          one consultant day per week on site or remote as suits.
+        </p>
+
+        <div class="workstream">
+          <div class="workstream-header">
+            <span class="ws-badge ws1">Phase 1</span>
+            <h4>Foundation &amp; Discovery (Weeks 1&ndash;2)</h4>
+          </div>
+          <ul>
+            <li>
+              Install Claude Code on Neil&rsquo;s and Nikki&rsquo;s machines
+              (and Lisa&rsquo;s for the handover period); set up mobile access
+            </li>
+            <li>
+              Connect MCP servers to Xero, Microsoft 365 (email, OneDrive,
+              calendar, Outlook contacts), Rightmove back-end (browser
+              automation initially), VOA, EPC register, and Land Registry
+            </li>
+            <li>
+              Build the &ldquo;CPR Wiki&rdquo; &mdash; a structured central
+              context store covering your clients, properties, suppliers,
+              standard processes and templates, so Claude has the same
+              background a member of staff would
+            </li>
+            <li>
+              Sit with Lisa to capture every step of her invoicing and cash-in
+              processes &mdash; the priority is locking down her tacit knowledge
+              before she leaves
+            </li>
+            <li>
+              Issue a workflow inventory with prioritised automation roadmap for
+              sign-off before build starts
+            </li>
+          </ul>
+        </div>
+
+        <div class="workstream">
+          <div class="workstream-header">
+            <span class="ws-badge ws2">Phase 2</span>
+            <h4>Priority Workflow Build (Weeks 3&ndash;10)</h4>
+          </div>
+          <ul>
+            <li>
+              <strong>Invoicing engine</strong> &mdash; rent and service charge
+              invoicing automated end-to-end: Claude generates the invoices in
+              Xero, drafts the covering emails, attaches the PDFs, and queues
+              them for one-click approval. Designed and tested alongside Lisa
+              while she is still in post.
+            </li>
+            <li>
+              <strong>Cash-in reconciliation</strong> &mdash; bank feed into
+              Xero, automated allocation to invoices, branded rent statements
+              produced for client landlords, exception list flagged daily
+            </li>
+            <li>
+              <strong>Compliance tracker</strong> &mdash; expiry dates extracted
+              from certificates, central dashboard, calendar reminders,
+              automated chasing emails for renewals
+            </li>
+            <li>
+              <strong>Lease report engine</strong> &mdash; PDF lease in,
+              structured abstract out: rent, term, breaks, repair, alienation,
+              user, service charge, with source citations to the lease itself
+              for verification
+            </li>
+            <li>
+              <strong>Meeting capture</strong> &mdash; meeting transcripts feed
+              back into the wiki automatically; action points become follow-up
+              reminders; client conversations stay searchable
+            </li>
+          </ul>
+        </div>
+
+        <div class="workstream">
+          <div class="workstream-header">
+            <span class="ws-badge ws3">Phase 3</span>
+            <h4>
+              Training, Handover &amp; Phase 2 Roadmap (Weeks 11&ndash;13)
+            </h4>
+          </div>
+          <ul>
+            <li>
+              Hands-on training for Neil and Nikki: prompt patterns, voice
+              dictation, mobile use, common workflows, when to override
+            </li>
+            <li>
+              Written SOPs for every automation built, so the system survives
+              future staff changes
+            </li>
+            <li>
+              Phase 2 roadmap covering valuation reports, brochure and Rightmove
+              automation, utility recharge, and any further workflows surfaced
+              during the engagement
+            </li>
+            <li>
+              Final review with Neil to confirm what is live, what is
+              outstanding, and whether to continue under the Evolve retainer
+            </li>
+          </ul>
+        </div>
+
+        <div class="workstream">
+          <div class="workstream-header">
+            <span class="ws-badge ws4">Optional</span>
+            <h4>Evolve &mdash; Ongoing AI Tech Partner (Month 4 onwards)</h4>
+          </div>
+          <ul>
+            <li>
+              Up to two consultant days per month plus async Slack/email support
+              for Neil and Nikki
+            </li>
+            <li>
+              New automations built as workflows surface; the tech stack evolves
+              with the business
+            </li>
+            <li>
+              Continuous integration of new Claude features, new MCPs (e.g.
+              Rightmove and CoStar when their APIs land), new property tools
+            </li>
+            <li>
+              Quarterly review: what is working, where to next, what to
+              decommission
+            </li>
+            <li>No minimum term; 30 days&rsquo; notice on either side</li>
+          </ul>
+        </div>
+
+        <div class="hybrid-box">
+          <h4>Recommended Sequencing</h4>
+          <p>
+            Lisa has confirmed she can extend her notice to the end of June. We
+            strongly recommend doing so. It gives us six weeks of overlap in
+            which her invoicing and cash-in processes are captured, automated,
+            and tested with her in the room. Anything less and those workflows
+            transfer cold to Nikki at the worst possible moment.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 3: DELIVERABLES + INVESTMENT -->
+    <div class="content page-break">
+      <div class="section">
+        <div class="section-number">04</div>
+        <h2>Deliverables</h2>
+        <p class="lead">What you have at the end of three months.</p>
+
+        <div class="deliverable-list">
+          <div class="deliverable-item">
+            <div class="deliverable-icon">1</div>
+            <div>
+              <h4>Claude Infrastructure Live Across CPR</h4>
+              <p>
+                Claude Code installed and configured for every active user,
+                connected to your full tech stack, with security and data
+                governance set up appropriately.
+              </p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">2</div>
+            <div>
+              <h4>Automated Invoicing Engine</h4>
+              <p>
+                Rent and service charge invoicing produced, checked and
+                dispatched through Xero with one-click approval. Tested and
+                signed off with Lisa before her departure.
+              </p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">3</div>
+            <div>
+              <h4>Cash-In Reconciliation Framework</h4>
+              <p>
+                Bank-feed-driven reconciliation, automated allocation to
+                invoices, branded landlord rent statements, daily exception
+                report.
+              </p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">4</div>
+            <div>
+              <h4>Compliance Tracker</h4>
+              <p>
+                Live dashboard of every EICR, gas, EPC and other compliance
+                certificate, with calendar reminders at 90, 30 and 7 days before
+                expiry, and automated chasing emails to suppliers.
+              </p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">5</div>
+            <div>
+              <h4>Lease Report Engine</h4>
+              <p>
+                Drop in any commercial lease PDF; receive a structured, cited,
+                RICS-grade lease abstract within minutes.
+              </p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">6</div>
+            <div>
+              <h4>CPR Wiki &mdash; Central Context Store</h4>
+              <p>
+                A living knowledge base of your clients, properties, suppliers,
+                templates and processes. Improves with every email, meeting and
+                document Claude touches.
+              </p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">7</div>
+            <div>
+              <h4>Workflow Inventory &amp; Phase 2 Roadmap</h4>
+              <p>
+                Complete map of CPR&rsquo;s workflows, with each one scored for
+                automation potential and time saved &mdash; a clear plan for the
+                next phase of work.
+              </p>
+            </div>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-icon">8</div>
+            <div>
+              <h4>Training &amp; SOPs</h4>
+              <p>
+                Hands-on training for Neil and Nikki, plus written standard
+                operating procedures for every automation, so the system is
+                yours to run and adapt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="section">
+        <div class="section-number">05</div>
+        <h2>Investment</h2>
+        <p class="lead">
+          Three options, depending on how much ongoing partnership you want
+          beyond the initial three months.
+        </p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="option-name">Option A &mdash; Embed Only</div>
+            <div class="price">&pound;8,125</div>
+            <div class="price-note">+ VAT | 3 months, fixed</div>
+            <ul>
+              <li>One day per week, Matt &amp; Jamie blended</li>
+              <li>Foundation &amp; Discovery (Wks 1&ndash;2)</li>
+              <li>Priority Workflow Build (Wks 3&ndash;10)</li>
+              <li>Training, Handover, Roadmap (Wks 11&ndash;13)</li>
+              <li>Invoicing engine</li>
+              <li>Cash-in reconciliation</li>
+              <li>Compliance tracker</li>
+              <li>Lease report engine</li>
+              <li>CPR Wiki + workflow inventory</li>
+              <li>SOPs for every automation</li>
+            </ul>
+          </div>
+          <div class="pricing-card recommended">
+            <div class="option-name">
+              Option B &mdash; Embed + 6&#8209;mo Evolve
+            </div>
+            <div class="price">&pound;15,000</div>
+            <div class="price-note">+ VAT | 9 months, fixed</div>
+            <ul>
+              <li>Everything in Option A</li>
+              <li>6 months of Evolve retainer</li>
+              <li>Up to 2 days/month Matt &amp; Jamie</li>
+              <li>Async Slack/email support</li>
+              <li>New automations as they surface</li>
+              <li>Quarterly review</li>
+              <li>Discounted vs. month-by-month</li>
+              <li>No 30-day churn risk</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <div class="option-name">
+              Option C &mdash; Embed + Rolling Evolve
+            </div>
+            <div class="price">&pound;8,125</div>
+            <div class="price-note">+ VAT | Setup, then &pound;1,500/mo</div>
+            <ul>
+              <li>Everything in Option A</li>
+              <li>Rolling Evolve from month 4</li>
+              <li>&pound;1,500 + VAT per month</li>
+              <li>Up to 2 days/month + async support</li>
+              <li>30 days&rsquo; notice on either side</li>
+              <li>No minimum term</li>
+              <li>Maximum flexibility</li>
+            </ul>
+          </div>
+        </div>
+
+        <p
+          style="font-size: 9.5pt; color: var(--mid-gray); margin-bottom: 12px"
+        >
+          <strong>Day rate:</strong> Our standard blended day rate (Matt and
+          Jamie) is &pound;950 + VAT. Pricing above reflects a blended rate of
+          &pound;625 + VAT per day, held for the full Embed engagement and
+          across any subsequent Evolve work.
+        </p>
+        <p
+          style="font-size: 9.5pt; color: var(--mid-gray); margin-bottom: 12px"
+        >
+          <strong>What CPR pays separately (third-party costs):</strong>
+          Claude seats at approximately &pound;18&ndash;100 per user per month
+          depending on usage; meeting recording (Circle Back or equivalent)
+          c.&pound;20 per user per month; any new MCP or API subscriptions
+          (typically negligible). We will recommend the right tier per user
+          during Phase 1.
+        </p>
+        <p style="font-size: 9.5pt; color: var(--light-gray)">
+          Payment terms: Embed fee invoiced 50% on instruction and 50% at end of
+          month two. Evolve invoiced monthly in advance. All prices exclusive of
+          VAT at the prevailing rate.
+        </p>
+      </div>
+    </div>
+
+    <!-- PAGE 4: TIMELINE -->
+    <div class="content page-break">
+      <div class="section">
+        <div class="section-number">06</div>
+        <h2>Indicative Timeline</h2>
+        <p class="lead">
+          Assuming instruction by mid-May 2026, kick-off the following week.
+        </p>
+
+        <ul class="timeline">
+          <li>
+            <strong>Week 1&ndash;2 &mdash; 19 May to 1 June</strong>
+            <span>
+              Discovery and setup. Claude installed across the team. MCPs
+              connected to Xero, Microsoft 365 and the rest of the stack. Lisa
+              walks us through her processes. CPR Wiki initialised. Workflow
+              inventory issued for sign-off.
+            </span>
+          </li>
+          <li>
+            <strong>Week 3&ndash;6 &mdash; 2 June to 29 June</strong>
+            <span>
+              Invoicing engine and cash-in reconciliation built and tested
+              alongside Lisa. Compliance tracker scoped. By the time Lisa leaves
+              at the end of June, the workflows that consume most of her week
+              are running automatically and Nikki has been trained on them.
+            </span>
+          </li>
+          <li>
+            <strong>Week 7&ndash;10 &mdash; 30 June to 27 July</strong>
+            <span>
+              Compliance tracker live. Lease report engine built. Meeting
+              capture flowing into the CPR Wiki. Phase 2 candidates (valuation
+              reports, brochure and Rightmove automation, utility recharge)
+              scoped.
+            </span>
+          </li>
+          <li>
+            <strong>Week 11&ndash;13 &mdash; 28 July to 17 August</strong>
+            <span>
+              Training, SOPs, handover, Phase 2 roadmap, decision on whether to
+              continue under Evolve.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="section">
+        <div class="section-number">07</div>
+        <h2>Your Team</h2>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <img src="matt.jpg" alt="Matt Fitzgerald" class="team-photo" />
+            <div class="name">Matt Fitzgerald MRICS</div>
+            <div class="role">Managing Director, Hillway<br />Embed Lead</div>
+          </div>
+          <div class="team-card">
+            <img src="jamie.jpg" alt="Jamie Smyth" class="team-photo" />
+            <div class="name">Jamie Smyth MRICS</div>
+            <div class="role">
+              Director, Hillway<br />Workflow &amp; Integrations Lead
+            </div>
+          </div>
+        </div>
+
+        <p>
+          Matt and Jamie share day-to-day delivery between them, supported by
+          the Hillway tech team for build and integration tasks. You will have
+          direct access to both, with weekly checkpoints scheduled in Outlook
+          and a shared Slack or Teams channel for in-flight queries.
+        </p>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="section">
+        <div class="section-number">08</div>
+        <h2>How We Work With Your Existing Stack</h2>
+        <p class="lead">
+          We do not replace what is working. We connect it and automate around
+          it.
+        </p>
+
+        <div class="coord-grid">
+          <div class="coord-card">
+            <h4>Xero</h4>
+            <div class="firm">Accounting &mdash; live</div>
+            <p>
+              Stay on Xero. We integrate via Xero&rsquo;s native API so Claude
+              can raise invoices, allocate receipts, run year-end checks and
+              produce reports without anyone having to log in.
+            </p>
+          </div>
+          <div class="coord-card">
+            <h4>Microsoft 365</h4>
+            <div class="firm">Email, Drive, Calendar</div>
+            <p>
+              Claude reads your inbox, your OneDrive, and your calendar
+              directly. No re-uploading documents. No copying data between
+              systems. Drafts back into your Outlook ready to send.
+            </p>
+          </div>
+          <div class="coord-card">
+            <h4>Rightmove &amp; Website</h4>
+            <div class="firm">Listings &amp; brochures</div>
+            <p>
+              Until a Rightmove MCP lands, browser automation populates the
+              back-end from your structured property data. Brochures produced in
+              seconds from a single prompt.
+            </p>
+          </div>
+          <div class="coord-card">
+            <h4>What We Will Not Do</h4>
+            <div class="firm">Replacing core tools</div>
+            <p>
+              We will not push you onto a new property management platform.
+              Re-Leased and the King Speed proposal you have already evaluated
+              are not the answer here &mdash; the answer is automation around
+              the tools you trust.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 5: NEXT STEPS -->
+    <div class="content page-break">
+      <div class="section">
+        <div class="section-number">09</div>
+        <h2>Next Steps</h2>
+
+        <div class="cta-box">
+          <h3>Ready to get started?</h3>
+          <p>
+            If you are happy with the scope, please confirm which option you
+            would like to proceed with. We will issue an engagement letter
+            within 48 hours and arrange a half-day kick-off at your office the
+            following week. To make the most of the Lisa overlap, instruction by
+            16 May 2026 is recommended.
+          </p>
+          <p>
+            If anything in this proposal is not quite right &mdash; scope,
+            sequencing, pricing &mdash; tell us and we will adapt. We would
+            rather have the right engagement than a polished one.
+          </p>
+          <br />
+          <p class="contact-line">
+            <strong>Matt Fitzgerald MRICS</strong> &mdash; matt@hillwayco.uk
+          </p>
+          <p class="contact-line">
+            <strong>Jamie Smyth MRICS</strong> &mdash; jamie@hillwayco.uk
+          </p>
+          <p class="contact-line">
+            Hillway Holdings Limited | RICS Regulated (Reg. 900798)
+          </p>
+          <p class="contact-line">
+            Steel City House, Sheffield S1 2GQ &nbsp;|&nbsp; JS Business Centre,
+            Doncaster DN4 5AB
+          </p>
+        </div>
+      </div>
+
+      <div class="confidential">
+        Confidential &mdash; Prepared exclusively for Commercial Property
+        Rotherham
+      </div>
+
+      <div class="page-footer">
+        <span>Hillway | RICS Regulated | Commercial Property. Evolved.</span>
+        <span>HPC/2026/CPR-001</span>
+      </div>
+    </div>
+  </body>
+</html>
