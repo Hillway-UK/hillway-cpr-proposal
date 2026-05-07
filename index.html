@@ -1039,6 +1039,170 @@
     </style>
   </head>
   <body>
+    <!-- ========== ACCESS GATE ========== -->
+    <div id="gate" aria-hidden="false">
+      <div class="gate-inner">
+        <div class="gate-brand">HILLWAY</div>
+        <div class="gate-h">Confidential.</div>
+        <p class="gate-p">
+          This proposal is prepared exclusively for Commercial Property
+          Rotherham. Please enter the access code provided alongside it.
+        </p>
+        <input
+          id="gate-pw"
+          type="password"
+          placeholder="Access code"
+          autocomplete="off"
+          autofocus
+        />
+        <button id="gate-go" type="button">Continue</button>
+        <div id="gate-err" role="alert"></div>
+        <div class="gate-foot">HPC/2026/CPR-001 · Hillway Holdings Limited</div>
+      </div>
+    </div>
+    <style>
+      #gate {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        color: #fff;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+      }
+      #gate.hidden {
+        display: none;
+      }
+      #gate .gate-inner {
+        max-width: 420px;
+        width: 90%;
+        padding: 48px 40px;
+        text-align: center;
+      }
+      #gate .gate-brand {
+        font-family: "Tenor Sans", serif;
+        font-size: 18px;
+        letter-spacing: 0.32em;
+        margin-bottom: 40px;
+        color: #fff;
+      }
+      #gate .gate-h {
+        font-family: "Tenor Sans", serif;
+        font-size: 40px;
+        line-height: 1.1;
+        margin-bottom: 16px;
+        letter-spacing: -0.01em;
+      }
+      #gate .gate-p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        line-height: 1.55;
+        margin-bottom: 32px;
+      }
+      #gate input {
+        width: 100%;
+        padding: 14px 18px;
+        background: #111;
+        border: 1px solid #333;
+        color: #fff;
+        border-radius: 8px;
+        font-size: 14px;
+        font-family: inherit;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      #gate input:focus {
+        border-color: #0066ff;
+      }
+      #gate button {
+        margin-top: 14px;
+        width: 100%;
+        padding: 14px 18px;
+        background: #0066ff;
+        color: #fff;
+        border: 0;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        letter-spacing: 0.04em;
+        transition: background 0.2s;
+      }
+      #gate button:hover {
+        background: #0052cc;
+      }
+      #gate #gate-err {
+        color: #ff5b6f;
+        margin-top: 16px;
+        font-size: 13px;
+        min-height: 20px;
+      }
+      #gate .gate-foot {
+        margin-top: 48px;
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+      }
+    </style>
+    <script>
+      (function () {
+        var EXPECTED =
+          "d9add80b938b532377747226626e6c2230ff0d328c467670d95e39491b4d215e";
+        var gate = document.getElementById("gate");
+        var pw = document.getElementById("gate-pw");
+        var go = document.getElementById("gate-go");
+        var err = document.getElementById("gate-err");
+        async function check() {
+          err.textContent = "";
+          var v = pw.value;
+          if (!v) {
+            err.textContent = "Please enter an access code.";
+            return;
+          }
+          var buf = await crypto.subtle.digest(
+            "SHA-256",
+            new TextEncoder().encode(v),
+          );
+          var hex = Array.from(new Uint8Array(buf))
+            .map(function (b) {
+              return b.toString(16).padStart(2, "0");
+            })
+            .join("");
+          if (hex === EXPECTED) {
+            try {
+              sessionStorage.setItem("cpr_unlocked", "1");
+            } catch (e) {}
+            gate.classList.add("hidden");
+            document.body.style.overflow = "";
+          } else {
+            err.textContent = "Incorrect access code.";
+            pw.value = "";
+            pw.focus();
+          }
+        }
+        go.addEventListener("click", check);
+        pw.addEventListener("keypress", function (e) {
+          if (e.key === "Enter") check();
+        });
+        try {
+          if (sessionStorage.getItem("cpr_unlocked") === "1") {
+            gate.classList.add("hidden");
+          } else {
+            document.body.style.overflow = "hidden";
+          }
+        } catch (e) {
+          document.body.style.overflow = "hidden";
+        }
+      })();
+    </script>
+
     <!-- ========== TOP NAV ========== -->
     <nav class="nav" id="nav">
       <a href="#top" class="brandmark">HILLWAY</a>
