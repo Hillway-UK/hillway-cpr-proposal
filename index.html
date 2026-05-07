@@ -857,8 +857,8 @@
       /* ========== TEAM (Section 07) ========== */
       .team-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 32px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
         margin-top: 64px;
       }
       .team-card {
@@ -895,7 +895,12 @@
         line-height: 1.65;
         color: var(--ink-3);
       }
-      @media (max-width: 880px) {
+      @media (max-width: 1100px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 680px) {
         .team-grid {
           grid-template-columns: 1fr;
         }
@@ -1142,15 +1147,20 @@
           <div class="col">
             <div class="lbl">Where we&rsquo;ve been</div>
             <h3>
-              You have already paid for two
-              <span class="accent">false starts.</span>
+              Two prior evaluations.
+              <span class="accent"
+                >The conditions weren&rsquo;t right yet.</span
+              >
             </h3>
             <p>
-              Re-Leased and the King Speed proposal (£20k bespoke build) both
-              stalled. The lesson is that wholesale platform replacement is the
-              wrong move for a three-person agency. The right move is automation
-              around the tools you already trust — Xero, Microsoft 365, your
-              website — and you can roll it out one workflow at a time.
+              You evaluated Re-Leased, and you reviewed the King Speed bespoke
+              build at &pound;20k. Neither went ahead — and that was the right
+              call at the time. With Lisa leaving, Nikki finding her feet and no
+              automation foundation underneath, neither would have been a good
+              investment yet. Build the foundation first &mdash; clean data,
+              automated workflows, trained staff &mdash; and platforms like
+              Re-Leased become a natural Phase 2 conversation rather than a leap
+              of faith.
             </p>
           </div>
         </div>
@@ -1630,46 +1640,62 @@
         <div class="bay-head reveal">
           <div class="num">07</div>
           <h2>
-            Your team. <span class="accent">Two MRICS partners,</span> with the
-            wider Hillway tech bench behind them.
+            Your team. <span class="accent">Three Hillway people,</span> with
+            the wider tech bench behind them.
           </h2>
         </div>
 
         <p class="bay-lead reveal">
-          You will have direct access to both. Weekly working sessions in your
-          diary, a shared messaging channel for everything in between, and one
-          phone number that always answers.
+          You will have direct access to all three. Weekly working sessions in
+          your diary, a shared messaging channel for everything in between, and
+          one phone number that always answers.
         </p>
 
         <div class="team-grid reveal">
           <div class="team-card">
-            <img src="matt.jpg" alt="Matt Fitzgerald MRICS" class="photo" />
-            <div>
-              <div class="name">Matt Fitzgerald MRICS</div>
-              <div class="role">Managing Director · Embed Lead</div>
-            </div>
-            <p>
-              Matt founded Hillway in 2024, after 15 years at CPP Property
-              running the property management and asset side. He has been
-              working with Claude in production since early 2025 and now runs
-              every Hillway client engagement through it. He owns the
-              engagement-design and rollout for CPR.
-            </p>
-          </div>
-          <div class="team-card">
             <img src="jamie.jpg" alt="Jamie Smyth MRICS" class="photo" />
             <div>
               <div class="name">Jamie Smyth MRICS</div>
+              <div class="role">Director · Engagement Lead</div>
+            </div>
+            <p>
+              Jamie owns the engagement and is your primary point of contact
+              through the three months. MRICS-qualified, with 15+ years across
+              commercial property in South Yorkshire, he runs Livin Residential
+              Lettings and Jock&rsquo;s Garage alongside Hillway and oversees
+              the RICS-compliant aspects of the work plus the day-to-day
+              relationship with you, Nikki and Lisa.
+            </p>
+          </div>
+          <div class="team-card">
+            <img src="matt.jpg" alt="Matt Fitzgerald MRICS" class="photo" />
+            <div>
+              <div class="name">Matt Fitzgerald MRICS</div>
               <div class="role">
-                Director · Workflow &amp; Integrations Lead
+                Managing Director · AI &amp; Integrations Lead
               </div>
             </div>
             <p>
-              Jamie runs Livin Residential Lettings and Jock&rsquo;s Garage
-              alongside Hillway, and has built custom Claude + Xero + Microsoft
-              365 integrations across all three. He owns the technical build for
-              CPR — Xero connection, MCP setup, automation pipelines, and the
-              CPR Wiki.
+              Matt founded Hillway in 2024 after 15 years at CPP Property. He
+              has been working with Claude in production since early 2025 and
+              now runs every Hillway client engagement through it. He owns the
+              AI architecture for CPR — Xero connection, MCP setup, automation
+              pipelines, and the CPR Wiki.
+            </p>
+          </div>
+          <div class="team-card">
+            <img src="alex.jpg" alt="Alex Brazier" class="photo" />
+            <div>
+              <div class="name">Alex Brazier</div>
+              <div class="role">
+                Service Charge &amp; PM · Implementation Support
+              </div>
+            </div>
+            <p>
+              Alex supports the build with a property management lens, ensuring
+              the automations match how a small commercial agency actually runs
+              day-to-day. She works closely with Nikki on the workflows that
+              touch service charge, invoicing and tenant statements.
             </p>
           </div>
         </div>
@@ -1721,12 +1747,15 @@
             </p>
           </div>
           <div class="col warn">
-            <div class="system">What we will not do.</div>
-            <div class="role">No platform replacement</div>
+            <div class="system">Re-Leased &mdash; open conversation.</div>
+            <div class="role">Phase 2 candidate</div>
             <p>
-              Re-Leased, King Speed and similar bespoke platform builds are not
-              in scope. You evaluated those for good reason — we are not
-              bringing you back to that conversation.
+              Not in scope for this engagement, but firmly on the table for
+              later. Once invoicing, cash-in and compliance are automated and
+              your data is clean, Re-Leased may well be the right step &mdash;
+              particularly if you bring in a dedicated property manager.
+              We&rsquo;ll bring it back into the conversation as part of Phase
+              2.
             </p>
           </div>
         </div>
