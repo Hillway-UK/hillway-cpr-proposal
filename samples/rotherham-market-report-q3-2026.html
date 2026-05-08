@@ -1,0 +1,2015 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+<script>(function(){if(typeof sessionStorage!=='undefined'&&sessionStorage.getItem('cpr_unlocked')!=='1'){window.location.replace('../cobranded.html');}})();</script>
+
+    <meta charset="UTF-8" />
+    <title>Rotherham Commercial Property Market Report — Q3 2026 | CPR</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cpr-red: #bd1622;
+        --charcoal: #1d1d1b;
+        --body-grey: #575756;
+        --rule-grey: #d8d8d6;
+        --soft-bg: #f7f5f2;
+        --soft-row: #faf8f5;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-family:
+          "Montserrat",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        font-weight: 300;
+        font-size: 10.5pt;
+        line-height: 1.55;
+        color: var(--body-grey);
+        background: #ececec;
+      }
+
+      /* A4 page */
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 22mm 20mm 20mm 20mm;
+        margin: 8mm auto;
+        background: #ffffff;
+        box-shadow: 0 2px 18px rgba(0, 0, 0, 0.08);
+        position: relative;
+        page-break-after: always;
+        overflow: hidden;
+      }
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .page {
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+
+      /* ---------- TYPOGRAPHY ---------- */
+      .display,
+      h1,
+      h2,
+      .stat-figure,
+      .cover-title,
+      .section-title,
+      .eyebrow-figure {
+        font-family: "Tenor Sans", "Times New Roman", serif;
+        font-weight: 400;
+        letter-spacing: 0.005em;
+        color: var(--charcoal);
+      }
+      h1 {
+        font-size: 32pt;
+        line-height: 1.05;
+      }
+      h2.section-title {
+        font-size: 22pt;
+        line-height: 1.1;
+        color: var(--charcoal);
+      }
+      h3 {
+        font-family: "Tenor Sans", serif;
+        font-weight: 400;
+        font-size: 13pt;
+        color: var(--charcoal);
+        margin-bottom: 4pt;
+      }
+      h4 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 9pt;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--cpr-red);
+        margin-bottom: 4pt;
+      }
+      p {
+        margin-bottom: 8pt;
+      }
+      strong {
+        font-weight: 600;
+        color: var(--charcoal);
+      }
+
+      .eyebrow {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 8.5pt;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--cpr-red);
+      }
+      .eyebrow-rule {
+        width: 36mm;
+        height: 1.5pt;
+        background: var(--cpr-red);
+        margin: 4pt 0 12pt 0;
+      }
+
+      .section-header {
+        margin-bottom: 14pt;
+      }
+      .section-header .eyebrow {
+        display: block;
+      }
+
+      /* ---------- COVER PAGE ---------- */
+      .cover {
+        background: var(--charcoal);
+        color: #ffffff;
+        padding: 24mm 20mm;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+      }
+      .cover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3mm;
+        background: var(--cpr-red);
+      }
+      .cover-logo {
+        width: 58mm;
+        filter: brightness(0) invert(1);
+        margin-bottom: 16mm;
+      }
+      .cover-eyebrow {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 9.5pt;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--cpr-red);
+        margin-bottom: 14mm;
+      }
+      .cover-title {
+        font-size: 50pt;
+        line-height: 1;
+        color: #ffffff;
+        margin-bottom: 6mm;
+        max-width: 165mm;
+      }
+      .cover-sub {
+        font-family: "Tenor Sans", serif;
+        font-size: 18pt;
+        color: #d8d8d6;
+        font-weight: 400;
+        margin-bottom: 20mm;
+      }
+      .cover-meta {
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        padding-top: 8mm;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8mm;
+        font-size: 9pt;
+        color: #d8d8d6;
+      }
+      .cover-meta .label {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 7.5pt;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--cpr-red);
+        display: block;
+        margin-bottom: 2mm;
+      }
+      .cover-meta .value {
+        font-family: "Tenor Sans", serif;
+        font-size: 11.5pt;
+        color: #ffffff;
+      }
+      .cover-strapline {
+        font-family: "Tenor Sans", serif;
+        font-size: 13pt;
+        color: #ffffff;
+        font-style: italic;
+        max-width: 130mm;
+        margin-top: 10mm;
+        border-left: 2pt solid var(--cpr-red);
+        padding-left: 6mm;
+      }
+      .cover-footer {
+        position: absolute;
+        bottom: 14mm;
+        left: 20mm;
+        right: 20mm;
+        display: flex;
+        justify-content: space-between;
+        font-size: 7.5pt;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #888;
+      }
+
+      /* ---------- HEADER / FOOTER per page ---------- */
+      .page-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.5pt solid var(--rule-grey);
+        padding-bottom: 5mm;
+        margin-bottom: 9mm;
+        font-size: 8pt;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--body-grey);
+      }
+      .page-head img {
+        height: 7mm;
+      }
+      .page-foot {
+        position: absolute;
+        bottom: 10mm;
+        left: 20mm;
+        right: 20mm;
+        display: flex;
+        justify-content: space-between;
+        font-size: 7.5pt;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #999;
+        border-top: 0.5pt solid var(--rule-grey);
+        padding-top: 3mm;
+      }
+
+      /* ---------- HEADLINE STATS ---------- */
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4mm;
+        margin: 6mm 0 8mm 0;
+      }
+      .stat {
+        border: 0.5pt solid var(--rule-grey);
+        padding: 7mm 6mm 6mm 6mm;
+        background: #fff;
+        position: relative;
+      }
+      .stat::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 12mm;
+        height: 1.5pt;
+        background: var(--cpr-red);
+      }
+      .stat .label {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 8pt;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--body-grey);
+        margin-bottom: 4mm;
+      }
+      .stat .figure {
+        font-family: "Tenor Sans", serif;
+        font-size: 32pt;
+        line-height: 1;
+        color: var(--charcoal);
+        margin-bottom: 3mm;
+      }
+      .stat .figure .unit {
+        font-size: 14pt;
+        color: var(--body-grey);
+        margin-left: 1mm;
+      }
+      .stat .delta {
+        font-family: "Montserrat", sans-serif;
+        font-size: 8.5pt;
+        font-weight: 600;
+        color: #2e7d32;
+      }
+      .stat .delta.down {
+        color: var(--cpr-red);
+      }
+      .stat .meta {
+        display: block;
+        font-size: 7.5pt;
+        color: #999;
+        margin-top: 1.5mm;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+      }
+
+      /* ---------- TABLES ---------- */
+      table.cpr {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 9pt;
+        margin: 4mm 0 6mm 0;
+      }
+      table.cpr thead th {
+        background: var(--cpr-red);
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 8pt;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 2.5mm 3mm;
+        border: 0;
+      }
+      table.cpr thead th.num {
+        text-align: right;
+      }
+      table.cpr tbody td {
+        padding: 2.3mm 3mm;
+        border-bottom: 0.5pt solid var(--rule-grey);
+        vertical-align: top;
+      }
+      table.cpr tbody td.num {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+      table.cpr tbody tr:nth-child(even) td {
+        background: var(--soft-row);
+      }
+      table.cpr tbody tr td strong {
+        color: var(--charcoal);
+      }
+      table.cpr tfoot td {
+        padding: 2.3mm 3mm;
+        font-weight: 600;
+        background: #f0eeea;
+        color: var(--charcoal);
+        border-top: 1pt solid var(--charcoal);
+      }
+      table.cpr tfoot td.num {
+        text-align: right;
+      }
+
+      /* ---------- CALL-OUT ---------- */
+      .callout {
+        border-left: 3pt solid var(--cpr-red);
+        background: var(--soft-bg);
+        padding: 5mm 6mm;
+        margin: 5mm 0;
+      }
+      .callout h4 {
+        color: var(--cpr-red);
+        margin-bottom: 2mm;
+      }
+      .callout p {
+        font-size: 9.5pt;
+      }
+      .callout p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ---------- TWO-COL ---------- */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8mm;
+      }
+
+      /* ---------- BAR CHART (CSS) ---------- */
+      .bar-row {
+        display: grid;
+        grid-template-columns: 38mm 1fr 18mm;
+        align-items: center;
+        gap: 3mm;
+        font-size: 8.5pt;
+        margin-bottom: 2.2mm;
+      }
+      .bar-row .lab {
+        color: var(--charcoal);
+        font-weight: 500;
+      }
+      .bar-row .track {
+        height: 4mm;
+        background: #efece7;
+        position: relative;
+        border-radius: 0.5mm;
+      }
+      .bar-row .fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: var(--cpr-red);
+        border-radius: 0.5mm;
+      }
+      .bar-row .val {
+        font-variant-numeric: tabular-nums;
+        text-align: right;
+        color: var(--charcoal);
+      }
+
+      /* ---------- INDICATOR ---------- */
+      .arrow-up::before {
+        content: "▲ ";
+        color: #2e7d32;
+        font-size: 8pt;
+      }
+      .arrow-down::before {
+        content: "▼ ";
+        color: var(--cpr-red);
+        font-size: 8pt;
+      }
+      .arrow-flat::before {
+        content: "▬ ";
+        color: #888;
+        font-size: 8pt;
+      }
+
+      /* ---------- FOREWORD ---------- */
+      .lede {
+        font-family: "Tenor Sans", serif;
+        font-size: 16pt;
+        line-height: 1.35;
+        color: var(--charcoal);
+        margin-bottom: 8mm;
+        max-width: 155mm;
+      }
+      .signature {
+        margin-top: 10mm;
+        padding-top: 6mm;
+        border-top: 0.5pt solid var(--rule-grey);
+      }
+      .signature .name {
+        font-family: "Tenor Sans", serif;
+        font-size: 13pt;
+        color: var(--charcoal);
+      }
+      .signature .role {
+        font-size: 8.5pt;
+        color: var(--body-grey);
+        letter-spacing: 0.05em;
+      }
+
+      /* ---------- ABOUT ---------- */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4mm 8mm;
+        margin: 4mm 0 8mm 0;
+      }
+      .services li {
+        list-style: none;
+        padding: 3mm 0 3mm 6mm;
+        border-bottom: 0.5pt solid var(--rule-grey);
+        position: relative;
+        font-size: 9.5pt;
+        color: var(--charcoal);
+      }
+      .services li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5mm;
+        width: 3mm;
+        height: 1.5pt;
+        background: var(--cpr-red);
+      }
+
+      .contact-block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6mm;
+        margin-top: 6mm;
+        padding: 6mm;
+        border: 0.5pt solid var(--rule-grey);
+        background: var(--soft-bg);
+      }
+      .contact-block .lab {
+        font-size: 7.5pt;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--cpr-red);
+        margin-bottom: 1.5mm;
+      }
+      .contact-block .val {
+        font-family: "Tenor Sans", serif;
+        font-size: 10.5pt;
+        color: var(--charcoal);
+      }
+
+      /* ---------- ILLUSTRATIVE BADGE ---------- */
+      .illustrative {
+        display: inline-block;
+        font-size: 7pt;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #ffffff;
+        background: var(--cpr-red);
+        padding: 1mm 3mm;
+        font-weight: 600;
+      }
+
+      /* ---------- METHODOLOGY ---------- */
+      .fineprint {
+        font-size: 7.8pt;
+        line-height: 1.55;
+        color: #777;
+      }
+      .fineprint p {
+        margin-bottom: 4pt;
+      }
+
+      .hillway-mark {
+        display: inline-block;
+        font-size: 7.5pt;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #888;
+      }
+      .hillway-mark strong {
+        color: var(--charcoal);
+        font-weight: 600;
+      }
+
+      /* ---------- TOC / Pagination strap ---------- */
+      .toc-grid {
+        display: grid;
+        grid-template-columns: 60mm 1fr 16mm;
+        border-bottom: 0.5pt solid var(--rule-grey);
+        padding: 2.5mm 0;
+        font-size: 9.5pt;
+      }
+      .toc-grid .num {
+        color: var(--cpr-red);
+        font-weight: 600;
+      }
+      .toc-grid .pg {
+        text-align: right;
+        color: var(--body-grey);
+      }
+
+      /* ---------- KEY-VALUE row in stat ---------- */
+      .kv {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        font-size: 9pt;
+        padding: 1.6mm 0;
+        border-bottom: 0.5pt dotted var(--rule-grey);
+      }
+      .kv:last-child {
+        border-bottom: 0;
+      }
+      .kv .k {
+        color: var(--body-grey);
+      }
+      .kv .v {
+        color: var(--charcoal);
+        font-weight: 500;
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ======================================================== -->
+    <!-- PAGE 1 — COVER                                           -->
+    <!-- ======================================================== -->
+    <section class="page cover">
+      <div>
+        <img
+          src="../cpr-logo.svg"
+          alt="Commercial Property Rotherham"
+          class="cover-logo"
+          style="
+            filter: none;
+            background: #fff;
+            padding: 6mm 8mm;
+            border-radius: 1mm;
+            display: inline-block;
+            width: 54mm;
+          "
+        />
+        <div class="cover-eyebrow" style="margin-top: 18mm">
+          Quarterly Market Intelligence&nbsp;&nbsp;·&nbsp;&nbsp;Q3 2026
+        </div>
+        <h1 class="cover-title">
+          Rotherham<br />Commercial<br />Property Market
+        </h1>
+        <div class="cover-sub">
+          Offices · Industrial &amp; Logistics · Retail · Investment
+        </div>
+        <div class="cover-strapline">
+          "Local market intelligence from CPR's instruction book — built from
+          the deals we are doing on the ground."
+        </div>
+      </div>
+
+      <div>
+        <div class="cover-meta">
+          <div>
+            <span class="label">Report Period</span>
+            <span class="value"
+              >Q3 2026<br /><span style="font-size: 8pt; color: #aaa"
+                >1 Jul – 30 Sep 2026</span
+              ></span
+            >
+          </div>
+          <div>
+            <span class="label">Published</span>
+            <span class="value">30 September 2026</span>
+          </div>
+          <div>
+            <span class="label">Coverage</span>
+            <span class="value"
+              >Rotherham &amp; Hinterland<br /><span
+                style="font-size: 8pt; color: #aaa"
+                >Town Centre, Moorgate, Westgate, Manvers, Eastwood, Maltby,
+                Dinnington, Wath</span
+              ></span
+            >
+          </div>
+        </div>
+
+        <div class="cover-footer">
+          <span
+            >Commercial Property Rotherham&nbsp;&nbsp;·&nbsp;&nbsp;RICS
+            Regulated</span
+          >
+          <span>Produced via Hillway AI workflow</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 2 — FOREWORD + CONTENTS                             -->
+    <!-- ======================================================== -->
+    <section class="page">
+      <div class="page-head">
+        <span>CPR Q3 2026 Market Report</span>
+        <span>Foreword &amp; Contents</span>
+      </div>
+
+      <div class="section-header">
+        <span class="eyebrow">Foreword</span>
+        <div class="eyebrow-rule"></div>
+        <h2 class="section-title">A market finding its footing</h2>
+      </div>
+
+      <p class="lede">
+        After two years of dislocation, Rotherham is showing the early signs of
+        a more rational commercial market — modest rental growth, sensible
+        yields, and a quieter but more deliverable pipeline of occupier
+        requirements.
+      </p>
+
+      <p>
+        The Bank Rate easing cycle that began in late 2025 has worked its way
+        into commercial pricing. Prime industrial yields in the South Yorkshire
+        sub-market have hardened back inside 6.5% and the volume of stock under
+        offer at the end of Q3 is the strongest we have recorded since Q2 2024.
+        Office demand remains polarised — best-in-class refurbished space at
+        Moorgate and town-centre stock with EPC B or better is letting at our
+        quoting tone, while older second-hand floors continue to drift on void.
+      </p>
+
+      <p>
+        South Yorkshire Mayoral Combined Authority's Growth Plan continues to
+        direct devolution funding into Rotherham — the M1 Junction 33 /
+        Templeborough corridor, the AMID at Manvers, and Town Centre
+        regeneration around Forge Island all featured in occupier conversations
+        this quarter. Public-sector lettings (DWP, NHS estate) and a steady
+        drumbeat of regional logistics requirements (3PL, last-mile, automotive
+        aftermarket) underpinned take-up.
+      </p>
+
+      <p>
+        This report is built from CPR's own instruction book — the lettings,
+        sales, rent reviews and lease renewals that we and our local peer group
+        are actively transacting. Where the data is partial we have said so. As
+        ever, please do call us if you would like to test a specific property or
+        strategy against the figures.
+      </p>
+
+      <div class="signature">
+        <div class="name">Neil Keally BSc (Hons) MRICS</div>
+        <div class="role">Director · Commercial Property Rotherham</div>
+      </div>
+
+      <div style="margin-top: 12mm">
+        <span class="eyebrow">Contents</span>
+        <div class="eyebrow-rule"></div>
+
+        <div class="toc-grid">
+          <span class="num">01</span><span>Headline indicators</span
+          ><span class="pg">03</span>
+        </div>
+        <div class="toc-grid">
+          <span class="num">02</span><span>Office market</span
+          ><span class="pg">04</span>
+        </div>
+        <div class="toc-grid">
+          <span class="num">03</span
+          ><span>Industrial &amp; logistics market</span
+          ><span class="pg">06</span>
+        </div>
+        <div class="toc-grid">
+          <span class="num">04</span><span>Retail market</span
+          ><span class="pg">07</span>
+        </div>
+        <div class="toc-grid">
+          <span class="num">05</span><span>Investment market</span
+          ><span class="pg">08</span>
+        </div>
+        <div class="toc-grid">
+          <span class="num">06</span
+          ><span>Forward view — Q4 2026 &amp; into 2027</span
+          ><span class="pg">09</span>
+        </div>
+        <div class="toc-grid">
+          <span class="num">07</span><span>About CPR</span
+          ><span class="pg">10</span>
+        </div>
+        <div class="toc-grid">
+          <span class="num">08</span><span>Methodology &amp; disclaimers</span
+          ><span class="pg">11</span>
+        </div>
+      </div>
+
+      <div class="page-foot">
+        <span>CPR Market Report&nbsp;·&nbsp;Q3 2026</span>
+        <span>02</span>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 3 — HEADLINE INDICATORS                             -->
+    <!-- ======================================================== -->
+    <section class="page">
+      <div class="page-head">
+        <span>CPR Q3 2026 Market Report</span>
+        <span>Section 01&nbsp;·&nbsp;Headline indicators</span>
+      </div>
+
+      <div class="section-header">
+        <span class="eyebrow">Section 01 — Headline indicators</span>
+        <div class="eyebrow-rule"></div>
+        <h2 class="section-title">Rotherham at a glance</h2>
+      </div>
+
+      <p style="max-width: 160mm; margin-bottom: 4mm">
+        Four numbers that frame the quarter. Prime rents firmed modestly across
+        both office and industrial; office take-up is running ahead of the
+        five-year average on the back of two larger Moorgate deals, while
+        industrial take-up softened against a strong comparator quarter.
+        <span class="illustrative">Illustrative draft</span>
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat">
+          <span class="label">Prime Office Rent</span>
+          <div class="figure">£15.50<span class="unit">/sq ft</span></div>
+          <div class="delta arrow-up">+6.9% YoY</div>
+          <span class="meta"
+            >Moorgate / town-centre Grade A · 5-yr avg £13.75</span
+          >
+        </div>
+        <div class="stat">
+          <span class="label">Prime Industrial Rent</span>
+          <div class="figure">£9.25<span class="unit">/sq ft</span></div>
+          <div class="delta arrow-up">+8.8% YoY</div>
+          <span class="meta"
+            >New / refurbished &lt;25,000 sq ft · M1 J33 / Templeborough</span
+          >
+        </div>
+        <div class="stat">
+          <span class="label">Office Take-Up Q3</span>
+          <div class="figure">38,400<span class="unit">sq ft</span></div>
+          <div class="delta arrow-up">+12.4% vs Q3 2025</div>
+          <span class="meta">11 deals · 5-yr Q3 avg 34,100 sq ft</span>
+        </div>
+        <div class="stat">
+          <span class="label">Industrial Take-Up Q3</span>
+          <div class="figure">187,500<span class="unit">sq ft</span></div>
+          <div class="delta down arrow-down">−9.6% vs Q3 2025</div>
+          <span class="meta">14 deals · constrained by stock, not demand</span>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h4>Yields — prime, end Q3</h4>
+          <div class="kv">
+            <span class="k">Prime industrial (let, 10yr+)</span
+            ><span class="v">6.25%</span>
+          </div>
+          <div class="kv">
+            <span class="k">Secondary industrial</span
+            ><span class="v">8.00%</span>
+          </div>
+          <div class="kv">
+            <span class="k">Prime office (let, 10yr+)</span
+            ><span class="v">7.75%</span>
+          </div>
+          <div class="kv">
+            <span class="k">Secondary office</span><span class="v">10.25%</span>
+          </div>
+          <div class="kv">
+            <span class="k">Town-centre retail (zone A pitch)</span
+            ><span class="v">9.00%</span>
+          </div>
+          <div class="kv">
+            <span class="k">Retail warehouse (Parkgate)</span
+            ><span class="v">7.25%</span>
+          </div>
+        </div>
+        <div>
+          <h4>Activity — Q3 2026 vs prior quarters</h4>
+          <div class="bar-row">
+            <span class="lab">Q3 2024 (off + ind)</span
+            ><span class="track"
+              ><span class="fill" style="width: 62%"></span></span
+            ><span class="val">198k</span>
+          </div>
+          <div class="bar-row">
+            <span class="lab">Q4 2024</span
+            ><span class="track"
+              ><span class="fill" style="width: 71%"></span></span
+            ><span class="val">227k</span>
+          </div>
+          <div class="bar-row">
+            <span class="lab">Q1 2025</span
+            ><span class="track"
+              ><span class="fill" style="width: 55%"></span></span
+            ><span class="val">175k</span>
+          </div>
+          <div class="bar-row">
+            <span class="lab">Q2 2025</span
+            ><span class="track"
+              ><span class="fill" style="width: 78%"></span></span
+            ><span class="val">249k</span>
+          </div>
+          <div class="bar-row">
+            <span class="lab">Q3 2025</span
+            ><span class="track"
+              ><span class="fill" style="width: 73%"></span></span
+            ><span class="val">241k</span>
+          </div>
+          <div class="bar-row">
+            <span class="lab">Q4 2025</span
+            ><span class="track"
+              ><span class="fill" style="width: 66%"></span></span
+            ><span class="val">211k</span>
+          </div>
+          <div class="bar-row">
+            <span class="lab">Q1 2026</span
+            ><span class="track"
+              ><span class="fill" style="width: 60%"></span></span
+            ><span class="val">192k</span>
+          </div>
+          <div class="bar-row">
+            <span class="lab">Q2 2026</span
+            ><span class="track"
+              ><span class="fill" style="width: 80%"></span></span
+            ><span class="val">256k</span>
+          </div>
+          <div class="bar-row">
+            <span class="lab" style="font-weight: 600; color: #bd1622"
+              >Q3 2026</span
+            ><span class="track"
+              ><span class="fill" style="width: 71%"></span></span
+            ><span class="val" style="font-weight: 600">226k</span>
+          </div>
+          <div style="font-size: 7.5pt; color: #999; margin-top: 3mm">
+            Total office + industrial take-up, sq ft (illustrative)
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <h4>Sub-market spotlight — Moorgate</h4>
+        <p>
+          Two refurbished floors above £15.00/sq ft signed in Q3 2026, both to
+          professional services occupiers relocating from older town-centre
+          stock. Genuine Grade A supply on Moorgate is now under 18,000 sq ft.
+          We expect quoting tone to test £16.50/sq ft on the next refurbishment
+          to complete in Q1 2027.
+        </p>
+      </div>
+
+      <div class="page-foot">
+        <span>CPR Market Report&nbsp;·&nbsp;Q3 2026</span>
+        <span>03</span>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 4 — OFFICE MARKET (1 of 2)                          -->
+    <!-- ======================================================== -->
+    <section class="page">
+      <div class="page-head">
+        <span>CPR Q3 2026 Market Report</span>
+        <span>Section 02&nbsp;·&nbsp;Office market</span>
+      </div>
+
+      <div class="section-header">
+        <span class="eyebrow">Section 02 — Office market</span>
+        <div class="eyebrow-rule"></div>
+        <h2 class="section-title">Polarised, but the top is moving</h2>
+      </div>
+
+      <p>
+        Rotherham's office market continues to split into two clear streams.
+        Refurbished, EPC B-or-better space at Moorgate and the better
+        town-centre buildings is now consistently letting at a £14.50–£16.00/sq
+        ft tone, with shorter voids and tenant inducements normalising back to
+        3–6 months on a 10-year term. Older second-hand stock — particularly
+        above ground-floor retail on Westgate and unimproved suites at the
+        periphery — is taking longer to let and is competing on inducement
+        rather than headline rent.
+      </p>
+
+      <p>
+        Take-up of <strong>38,400 sq ft</strong> across 11 transactions was
+        12.4% ahead of Q3 2025. Professional services (accountancy, legal,
+        recruitment, insurance broking) accounted for just under half of
+        floorspace let, with public-sector and healthcare-adjacent occupiers
+        contributing two larger deals.
+      </p>
+
+      <h4 style="margin-top: 6mm">Rental tone by sub-market — Q3 2026</h4>
+      <table class="cpr">
+        <thead>
+          <tr>
+            <th>Sub-market</th>
+            <th>Typical stock</th>
+            <th class="num">Prime (£/sq ft)</th>
+            <th class="num">Secondary (£/sq ft)</th>
+            <th class="num">YoY prime</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Moorgate</strong></td>
+            <td>Refurbished period &amp; '00s purpose-built</td>
+            <td class="num">£15.50</td>
+            <td class="num">£11.50</td>
+            <td class="num arrow-up">+6.9%</td>
+          </tr>
+          <tr>
+            <td><strong>Town Centre — Westgate &amp; All Saints</strong></td>
+            <td>Above-shop &amp; refurbished mid-rise</td>
+            <td class="num">£13.75</td>
+            <td class="num">£9.50</td>
+            <td class="num arrow-up">+3.8%</td>
+          </tr>
+          <tr>
+            <td><strong>Town Centre — Bridgegate / Ship Hill</strong></td>
+            <td>Period conversions &amp; mixed-use</td>
+            <td class="num">£12.50</td>
+            <td class="num">£8.75</td>
+            <td class="num arrow-flat">+1.0%</td>
+          </tr>
+          <tr>
+            <td><strong>Manvers / Dearne Valley</strong></td>
+            <td>Out-of-town business park</td>
+            <td class="num">£14.00</td>
+            <td class="num">£10.50</td>
+            <td class="num arrow-up">+5.7%</td>
+          </tr>
+          <tr>
+            <td><strong>Eastwood / Aldwarke</strong></td>
+            <td>Light-industrial-converted office</td>
+            <td class="num">£10.75</td>
+            <td class="num">£7.50</td>
+            <td class="num arrow-flat">+0.0%</td>
+          </tr>
+          <tr>
+            <td><strong>Templeborough / Magna corridor</strong></td>
+            <td>Edge-of-centre business space</td>
+            <td class="num">£11.50</td>
+            <td class="num">£8.25</td>
+            <td class="num arrow-up">+2.2%</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Rotherham office composite</td>
+            <td class="num">£13.25</td>
+            <td class="num">£9.50</td>
+            <td class="num arrow-up">+4.3%</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h4>Notable office lettings — Q3 2026</h4>
+      <table class="cpr">
+        <thead>
+          <tr>
+            <th>Address</th>
+            <th>Sub-market</th>
+            <th class="num">Sq ft</th>
+            <th class="num">Rent (£/sf)</th>
+            <th>Tenant</th>
+            <th>Lease</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>14 Moorgate Road, 2nd Floor</td>
+            <td>Moorgate</td>
+            <td class="num">5,840</td>
+            <td class="num">£15.75</td>
+            <td>Halversen Mellor (accountants)</td>
+            <td>10yr · 5yr brk</td>
+          </tr>
+          <tr>
+            <td>Imperial House, Moorgate</td>
+            <td>Moorgate</td>
+            <td class="num">4,210</td>
+            <td class="num">£15.25</td>
+            <td>Northbridge Recruitment</td>
+            <td>10yr · upwd-only</td>
+          </tr>
+          <tr>
+            <td>2 Westgate Chambers</td>
+            <td>Town Centre</td>
+            <td class="num">3,950</td>
+            <td class="num">£13.50</td>
+            <td>South Riding Insurance Brokers</td>
+            <td>5yr</td>
+          </tr>
+          <tr>
+            <td>Forge Island Phase 1, Suite C</td>
+            <td>Town Centre</td>
+            <td class="num">6,720</td>
+            <td class="num">£14.25</td>
+            <td>Confidential — public sector</td>
+            <td>10yr</td>
+          </tr>
+          <tr>
+            <td>Innovation Way, Manvers (3rd Fl)</td>
+            <td>Manvers</td>
+            <td class="num">5,180</td>
+            <td class="num">£14.00</td>
+            <td>Pilgrim &amp; Hayes Legal</td>
+            <td>10yr · 5yr brk</td>
+          </tr>
+          <tr>
+            <td>Bridgegate House, Ground &amp; First</td>
+            <td>Bridgegate</td>
+            <td class="num">2,380</td>
+            <td class="num">£12.75</td>
+            <td>Ardenwood Wealth</td>
+            <td>5yr</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-foot">
+        <span>CPR Market Report&nbsp;·&nbsp;Q3 2026</span>
+        <span>04</span>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 5 — OFFICE MARKET (2 of 2)                          -->
+    <!-- ======================================================== -->
+    <section class="page">
+      <div class="page-head">
+        <span>CPR Q3 2026 Market Report</span>
+        <span>Section 02&nbsp;·&nbsp;Office market continued</span>
+      </div>
+
+      <div class="two-col" style="margin-bottom: 8mm">
+        <div>
+          <h4>Supply — total office availability</h4>
+          <p>
+            Total marketed availability across Rotherham fell to circa
+            <strong>312,000 sq ft</strong> at end Q3, the lowest reading since
+            Q4 2022. Genuine Grade A availability is now thin — under
+            <strong>22,000 sq ft</strong> across all sub-markets — and is
+            concentrated in two buildings at Moorgate.
+          </p>
+          <p>
+            Refurbishment is the only meaningful pipeline. Two schemes totalling
+            roughly 18,500 sq ft are due to complete in Q1 2027 and a further
+            12,000 sq ft is in pre-let discussion at Forge Island Phase 2.
+          </p>
+        </div>
+        <div>
+          <h4>Demand — live requirements on CPR's book</h4>
+          <p>
+            CPR is currently holding
+            <strong>27 named office requirements</strong> across the borough
+            totalling circa 64,000 sq ft. Median requirement size is 1,850 sq
+            ft; the largest is a 6,500 sq ft consolidation move from a regional
+            professional services firm. Roughly two-thirds of named requirements
+            specify EPC B or better as a hard filter.
+          </p>
+          <p>
+            Net effective rent — after rent-free, capital contributions and
+            dilapidations capping — sits at approximately 87% of headline tone
+            for Grade A and 78% for secondary stock.
+          </p>
+        </div>
+      </div>
+
+      <h4>Take-up by sub-market — last four quarters (sq ft)</h4>
+      <div style="margin: 4mm 0 8mm 0">
+        <div class="bar-row">
+          <span class="lab">Moorgate</span
+          ><span class="track"
+            ><span class="fill" style="width: 84%"></span></span
+          ><span class="val">14,230</span>
+        </div>
+        <div class="bar-row">
+          <span class="lab">Town Centre — Westgate</span
+          ><span class="track"
+            ><span class="fill" style="width: 54%"></span></span
+          ><span class="val">9,180</span>
+        </div>
+        <div class="bar-row">
+          <span class="lab">Town Centre — Bridgegate</span
+          ><span class="track"
+            ><span class="fill" style="width: 18%"></span></span
+          ><span class="val">3,090</span>
+        </div>
+        <div class="bar-row">
+          <span class="lab">Manvers / Dearne Valley</span
+          ><span class="track"
+            ><span class="fill" style="width: 42%"></span></span
+          ><span class="val">7,140</span>
+        </div>
+        <div class="bar-row">
+          <span class="lab">Eastwood / Aldwarke</span
+          ><span class="track"
+            ><span class="fill" style="width: 14%"></span></span
+          ><span class="val">2,420</span>
+        </div>
+        <div class="bar-row">
+          <span class="lab">Templeborough corridor</span
+          ><span class="track"
+            ><span class="fill" style="width: 13%"></span></span
+          ><span class="val">2,340</span>
+        </div>
+        <div style="font-size: 7.5pt; color: #999; margin-top: 2mm">
+          Q3 2026 take-up by sub-market (illustrative)
+        </div>
+      </div>
+
+      <div class="callout">
+        <h4>Sub-market spotlight — Forge Island</h4>
+        <p>
+          Forge Island has materially shifted the market's expectation for
+          town-centre Grade A. The Phase 1 lettings completed during 2025–26
+          have established a £14.00–£14.50/sq ft benchmark and pulled enquiries
+          away from older town-centre stock that would previously have been the
+          default. We expect Phase 2 to set the next reference point in 2027 —
+          quoting tone is likely to test £15.00/sq ft on a 10-year term.
+        </p>
+      </div>
+
+      <h4>Outlook — office</h4>
+      <p>
+        We expect prime tone to push toward £16.00/sq ft over the next four
+        quarters as the next refurbishment cycle delivers and Grade A
+        availability tightens further. Secondary remains the watch-out: dated,
+        EPC C-or-worse stock continues to drift, and the gap between prime and
+        secondary will widen. Landlords with options-to-refurbish should be
+        running the numbers now — the rent-free / capex trade-off is currently
+        as favourable as we have seen since 2018.
+      </p>
+
+      <div class="page-foot">
+        <span>CPR Market Report&nbsp;·&nbsp;Q3 2026</span>
+        <span>05</span>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 6 — INDUSTRIAL                                      -->
+    <!-- ======================================================== -->
+    <section class="page">
+      <div class="page-head">
+        <span>CPR Q3 2026 Market Report</span>
+        <span>Section 03&nbsp;·&nbsp;Industrial &amp; logistics</span>
+      </div>
+
+      <div class="section-header">
+        <span class="eyebrow">Section 03 — Industrial &amp; logistics</span>
+        <div class="eyebrow-rule"></div>
+        <h2 class="section-title">Stock-constrained, demand-led</h2>
+      </div>
+
+      <p>
+        Industrial remains the strongest sector in the Rotherham economy.
+        Take-up of <strong>187,500 sq ft</strong> across 14 transactions was
+        9.6% behind a strong Q3 2025 — but this reflects supply scarcity rather
+        than weakening demand. CPR's named requirements register is at a
+        five-year high and we are closing deals faster than units are coming
+        back to the market.
+      </p>
+
+      <p>
+        The M1 / M18 corridor, anchored by Junctions 32, 33 and 34, continues to
+        draw 3PL, automotive aftermarket and last-mile occupiers. The Advanced
+        Manufacturing Innovation District (AMID) at Manvers is feeding a steady
+        drumbeat of design-and-build enquiries from Tier-1 and Tier-2
+        manufacturers — three of those moved into solicitor-led negotiations in
+        Q3.
+      </p>
+
+      <h4 style="margin-top: 6mm">Rental tone by size band — Q3 2026</h4>
+      <table class="cpr">
+        <thead>
+          <tr>
+            <th>Size band</th>
+            <th>Typical specification</th>
+            <th class="num">Prime (£/sq ft)</th>
+            <th class="num">Secondary (£/sq ft)</th>
+            <th class="num">YoY prime</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>&lt; 5,000 sq ft</strong></td>
+            <td>Trade counter / small business unit</td>
+            <td class="num">£10.50</td>
+            <td class="num">£7.75</td>
+            <td class="num arrow-up">+10.5%</td>
+          </tr>
+          <tr>
+            <td><strong>5,000 – 15,000 sq ft</strong></td>
+            <td>SME warehouse / light industrial</td>
+            <td class="num">£9.50</td>
+            <td class="num">£7.00</td>
+            <td class="num arrow-up">+8.6%</td>
+          </tr>
+          <tr>
+            <td><strong>15,000 – 50,000 sq ft</strong></td>
+            <td>Mid-box logistics / manufacturing</td>
+            <td class="num">£9.25</td>
+            <td class="num">£6.75</td>
+            <td class="num arrow-up">+8.8%</td>
+          </tr>
+          <tr>
+            <td><strong>50,000 – 150,000 sq ft</strong></td>
+            <td>Big-box logistics / regional DC</td>
+            <td class="num">£8.75</td>
+            <td class="num">£6.50</td>
+            <td class="num arrow-up">+5.4%</td>
+          </tr>
+          <tr>
+            <td><strong>&gt; 150,000 sq ft</strong></td>
+            <td>Strategic warehouse (limited stock)</td>
+            <td class="num">£8.25</td>
+            <td class="num">n/a</td>
+            <td class="num arrow-up">+3.1%</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Rotherham industrial composite</td>
+            <td class="num">£9.05</td>
+            <td class="num">£7.00</td>
+            <td class="num arrow-up">+7.7%</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h4>Notable industrial transactions — Q3 2026</h4>
+      <table class="cpr">
+        <thead>
+          <tr>
+            <th>Address</th>
+            <th>Type</th>
+            <th class="num">Sq ft</th>
+            <th class="num">Rent / Capital value</th>
+            <th>Occupier / Buyer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Unit 4, Eastwood Trading Estate</td>
+            <td>Letting</td>
+            <td class="num">28,500</td>
+            <td class="num">£9.50/sf</td>
+            <td>Hattersley Logistics (3PL)</td>
+          </tr>
+          <tr>
+            <td>Aldwarke Distribution Park, Unit B</td>
+            <td>Letting</td>
+            <td class="num">62,400</td>
+            <td class="num">£8.95/sf</td>
+            <td>Northstar Aftermarket Parts</td>
+          </tr>
+          <tr>
+            <td>Templeborough Industrial — Plot 7</td>
+            <td>D&amp;B pre-let</td>
+            <td class="num">42,000</td>
+            <td class="num">£9.25/sf</td>
+            <td>Confidential — automotive Tier-1</td>
+          </tr>
+          <tr>
+            <td>Manvers — AMID Phase 2</td>
+            <td>Sale (FH)</td>
+            <td class="num">18,600</td>
+            <td class="num">£2.95m</td>
+            <td>Owner-occupier — precision engineering</td>
+          </tr>
+          <tr>
+            <td>Dinnington Business Park, Unit 11</td>
+            <td>Letting</td>
+            <td class="num">8,150</td>
+            <td class="num">£9.75/sf</td>
+            <td>Greaves Plumbing &amp; Heating</td>
+          </tr>
+          <tr>
+            <td>Maltby — Highfield Lane</td>
+            <td>Letting</td>
+            <td class="num">14,200</td>
+            <td class="num">£9.00/sf</td>
+            <td>Coreflow Filtration Ltd</td>
+          </tr>
+          <tr>
+            <td>Wath Industrial — Unit C2</td>
+            <td>Sale (FH)</td>
+            <td class="num">5,400</td>
+            <td class="num">£0.78m</td>
+            <td>Owner-occupier — fabrication</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="two-col" style="margin-top: 6mm">
+        <div>
+          <h4>Vacancy &amp; supply</h4>
+          <p>
+            Industrial vacancy across the Rotherham travel-to-work area is at
+            <strong>3.4%</strong> at end Q3, modestly tighter than Q2 (3.7%) and
+            well below the long-run average of 6.1%. Sub-25,000 sq ft
+            availability is the tightest band, with under 60,000 sq ft on the
+            market across 11 units.
+          </p>
+        </div>
+        <div>
+          <h4>Planning &amp; pipeline</h4>
+          <p>
+            Three industrial consents progressed through Rotherham MBC planning
+            in Q3: (i) c.95,000 sq ft speculative scheme at Templeborough; (ii)
+            Phase 3 of AMID at Manvers (c.140,000 sq ft over three plots); (iii)
+            reserved-matters approval for a 28,000 sq ft trade scheme at
+            Eastwood. Earliest deliveries from this cohort are Q3 2027.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <h4>Sub-market spotlight — Manvers AMID</h4>
+        <p>
+          The Advanced Manufacturing Innovation District is now the single
+          biggest source of design-and-build enquiries in the South Yorkshire
+          industrial market outside the Sheffield AMP. Three pre-let
+          conversations advanced in Q3 across precision engineering, advanced
+          metals and a battery-systems Tier-2. Quoting tone on D&amp;B is
+          testing £9.50/sq ft on 15-year terms — a level that would have looked
+          aspirational two years ago.
+        </p>
+      </div>
+
+      <div class="page-foot">
+        <span>CPR Market Report&nbsp;·&nbsp;Q3 2026</span>
+        <span>06</span>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 7 — RETAIL + INVESTMENT (combined)                  -->
+    <!-- ======================================================== -->
+    <section class="page">
+      <div class="page-head">
+        <span>CPR Q3 2026 Market Report</span>
+        <span>Section 04 &amp; 05&nbsp;·&nbsp;Retail and Investment</span>
+      </div>
+
+      <div class="section-header">
+        <span class="eyebrow">Section 04 — Retail market</span>
+        <div class="eyebrow-rule"></div>
+        <h2 class="section-title">
+          Town centre re-anchoring; out-of-town steady
+        </h2>
+      </div>
+
+      <p>
+        Town-centre retail remains in transition. Forge Island's leisure and
+        F&amp;B-led offer is reshaping the gravity of the centre, with positive
+        footfall reads on College Street and around All Saints Square. Westgate
+        continues to see vacancy churn — but encouragingly, three of the four
+        units re-let in Q3 went to independent operators (two F&amp;B, one
+        specialist retail) at headline rents around £18,500–£24,000 per annum.
+      </p>
+
+      <p>
+        Out-of-town retail at Parkgate Retail Park and Cortonwood is the
+        strongest performing retail format in the borough. Both schemes are
+        reporting low single-digit vacancy and a steady pipeline of mid-market
+        requirements (value fashion, pet, homeware, branded F&amp;B drive-thru).
+      </p>
+
+      <table class="cpr">
+        <thead>
+          <tr>
+            <th>Pitch / Scheme</th>
+            <th class="num">Zone A (£/sq ft)</th>
+            <th class="num">Headline (typical unit)</th>
+            <th class="num">Vacancy</th>
+            <th>Direction</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Westgate prime pitch</strong></td>
+            <td class="num">£42</td>
+            <td class="num">£24,000 pa</td>
+            <td class="num">11.2%</td>
+            <td class="arrow-flat">Stable</td>
+          </tr>
+          <tr>
+            <td><strong>College Street</strong></td>
+            <td class="num">£36</td>
+            <td class="num">£19,500 pa</td>
+            <td class="num">8.4%</td>
+            <td class="arrow-up">Improving</td>
+          </tr>
+          <tr>
+            <td><strong>All Saints Square</strong></td>
+            <td class="num">£38</td>
+            <td class="num">£21,000 pa</td>
+            <td class="num">7.1%</td>
+            <td class="arrow-up">Improving</td>
+          </tr>
+          <tr>
+            <td><strong>High Street / Bridgegate</strong></td>
+            <td class="num">£28</td>
+            <td class="num">£14,500 pa</td>
+            <td class="num">15.6%</td>
+            <td class="arrow-down">Soft</td>
+          </tr>
+          <tr>
+            <td><strong>Parkgate Retail Park</strong></td>
+            <td class="num">£24 OITL</td>
+            <td class="num">£165,000 pa (10k unit)</td>
+            <td class="num">3.1%</td>
+            <td class="arrow-up">Strong</td>
+          </tr>
+          <tr>
+            <td><strong>Cortonwood</strong></td>
+            <td class="num">£22 OITL</td>
+            <td class="num">£148,000 pa (10k unit)</td>
+            <td class="num">2.4%</td>
+            <td class="arrow-up">Strong</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-size: 8.5pt; color: #888; margin-top: -2mm">
+        OITL = overall in-town letting rate (used for retail warehouse standard
+        units).
+      </p>
+
+      <hr
+        style="
+          border: 0;
+          border-top: 0.5pt solid var(--rule-grey);
+          margin: 8mm 0;
+        "
+      />
+
+      <div class="section-header">
+        <span class="eyebrow">Section 05 — Investment market</span>
+        <div class="eyebrow-rule"></div>
+        <h2 class="section-title">Buyers are back — selectively</h2>
+      </div>
+
+      <p>
+        The combination of a more settled rate environment and modest rental
+        growth has brought a wider buyer pool back into the Rotherham investment
+        market in Q3. Industrial remains the deepest market by some margin, with
+        prime stock attracting competitive bidding from regional propcos and a
+        small number of private investors. Office investment is more selective:
+        well-let, EPC B-or-better stock is tradeable; older multi-let secondary
+        continues to be priced as a refurbishment / asset-management play.
+      </p>
+
+      <table class="cpr">
+        <thead>
+          <tr>
+            <th>Sector / sub-sector</th>
+            <th class="num">Prime yield</th>
+            <th class="num">Secondary yield</th>
+            <th class="num">QoQ (bps)</th>
+            <th>Buyer profile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Industrial — single-let, 10yr+ income</strong></td>
+            <td class="num">6.25%</td>
+            <td class="num">8.00%</td>
+            <td class="num">−25</td>
+            <td>Regional propcos, private clients</td>
+          </tr>
+          <tr>
+            <td><strong>Industrial — multi-let estate</strong></td>
+            <td class="num">6.75%</td>
+            <td class="num">8.50%</td>
+            <td class="num">−15</td>
+            <td>Regional propcos</td>
+          </tr>
+          <tr>
+            <td><strong>Office — town centre, EPC B+</strong></td>
+            <td class="num">7.75%</td>
+            <td class="num">10.25%</td>
+            <td class="num">−10</td>
+            <td>Private investors, family offices</td>
+          </tr>
+          <tr>
+            <td><strong>Retail warehouse (Parkgate / Cortonwood)</strong></td>
+            <td class="num">7.25%</td>
+            <td class="num">8.75%</td>
+            <td class="num">−25</td>
+            <td>Specialist retail funds</td>
+          </tr>
+          <tr>
+            <td><strong>Town-centre retail (zone A)</strong></td>
+            <td class="num">9.00%</td>
+            <td class="num">11.50%</td>
+            <td class="num">flat</td>
+            <td>Local private investors</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>Notable Q3 2026 investment trades</h4>
+      <table class="cpr">
+        <thead>
+          <tr>
+            <th>Asset</th>
+            <th>Sector</th>
+            <th class="num">Lot size</th>
+            <th class="num">NIY</th>
+            <th>Buyer profile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Eastwood Trading Estate — Units 1–4</td>
+            <td>Multi-let industrial</td>
+            <td class="num">£9.85m</td>
+            <td class="num">6.85%</td>
+            <td>Yorkshire-based propco</td>
+          </tr>
+          <tr>
+            <td>Imperial House, Moorgate</td>
+            <td>Single-let office</td>
+            <td class="num">£3.40m</td>
+            <td class="num">7.65%</td>
+            <td>Private investor (Sheffield)</td>
+          </tr>
+          <tr>
+            <td>Parkgate — Sub-let DIY unit</td>
+            <td>Retail warehouse</td>
+            <td class="num">£6.20m</td>
+            <td class="num">7.30%</td>
+            <td>Specialist retail fund</td>
+          </tr>
+          <tr>
+            <td>Templeborough — Single industrial</td>
+            <td>Single-let industrial</td>
+            <td class="num">£4.95m</td>
+            <td class="num">6.40%</td>
+            <td>Family office (London)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-foot">
+        <span>CPR Market Report&nbsp;·&nbsp;Q3 2026</span>
+        <span>07</span>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 8 — FORWARD VIEW                                    -->
+    <!-- ======================================================== -->
+    <section class="page">
+      <div class="page-head">
+        <span>CPR Q3 2026 Market Report</span>
+        <span>Section 06&nbsp;·&nbsp;Forward view</span>
+      </div>
+
+      <div class="section-header">
+        <span class="eyebrow">Section 06 — Forward view</span>
+        <div class="eyebrow-rule"></div>
+        <h2 class="section-title">Q4 2026 and into 2027</h2>
+      </div>
+
+      <p class="lede">
+        Our base case is for a more confident occupier market into Q4, supported
+        by the rate cycle, devolution funding flowing through the SYMCA growth
+        plan, and a continued shortage of best-in-class stock.
+      </p>
+
+      <div class="two-col" style="margin-top: 4mm">
+        <div>
+          <h4>Q4 2026 — what we expect</h4>
+          <p>
+            <strong>Office.</strong> Take-up to finish 2026 at or marginally
+            ahead of the five-year average. Prime tone holds at £15.50/sq ft,
+            with the next refurbishment cycle setting up a push toward £16.00 in
+            early 2027.
+          </p>
+          <p>
+            <strong>Industrial.</strong> Take-up volumes stock-constrained
+            rather than demand-constrained. Prime rents to test £9.50/sq ft on
+            the next D&amp;B settlement at Manvers or Templeborough.
+          </p>
+          <p>
+            <strong>Retail.</strong> Town centre to continue re-anchoring around
+            Forge Island and All Saints Square — independents are doing the
+            heavy lifting. Out-of-town remains the strongest format.
+          </p>
+          <p>
+            <strong>Investment.</strong> Industrial prime yields to harden a
+            further 10–15 bps if the rate cycle continues as expected. Office
+            investment a bottom-up, building-by-building market.
+          </p>
+        </div>
+        <div>
+          <h4>2027 themes to watch</h4>
+          <ul style="list-style: none; padding: 0">
+            <li
+              style="
+                padding: 3mm 0;
+                border-bottom: 0.5pt solid var(--rule-grey);
+              "
+            >
+              <strong style="color: #bd1622">01.</strong>&nbsp;&nbsp;<strong
+                >EPC B by 2030</strong
+              >
+              — landlord capex decisions on secondary stock can no longer be
+              deferred. The cost-to-comply gap is the dominant variable in
+              valuation conversations.
+            </li>
+            <li
+              style="
+                padding: 3mm 0;
+                border-bottom: 0.5pt solid var(--rule-grey);
+              "
+            >
+              <strong style="color: #bd1622">02.</strong>&nbsp;&nbsp;<strong
+                >Forge Island Phase 2</strong
+              >
+              — sets the next town-centre Grade A reference point and will pull
+              more enquiry into the centre.
+            </li>
+            <li
+              style="
+                padding: 3mm 0;
+                border-bottom: 0.5pt solid var(--rule-grey);
+              "
+            >
+              <strong style="color: #bd1622">03.</strong>&nbsp;&nbsp;<strong
+                >AMID Manvers</strong
+              >
+              — Phase 3 consents bring c.140,000 sq ft of D&amp;B-able plots
+              into the conversation. Tier-1 / Tier-2 manufacturing demand
+              persists.
+            </li>
+            <li
+              style="
+                padding: 3mm 0;
+                border-bottom: 0.5pt solid var(--rule-grey);
+              "
+            >
+              <strong style="color: #bd1622">04.</strong>&nbsp;&nbsp;<strong
+                >SYMCA devolution funding</strong
+              >
+              — visible in the M1 J33 corridor and Town Centre regeneration.
+              Public-sector occupier demand likely to remain a feature.
+            </li>
+            <li style="padding: 3mm 0">
+              <strong style="color: #bd1622">05.</strong>&nbsp;&nbsp;<strong
+                >Refurbishment economics</strong
+              >
+              — rent-free / capex trade-off currently as favourable as we have
+              seen in seven years. Landlords with optionality should be running
+              numbers now.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top: 4mm">
+        <h4>Risks to the base case</h4>
+        <p>
+          (i) A reversal in the rate cycle would pause the yield-hardening
+          dynamic. (ii) An EPC compliance acceleration would bring refurbishment
+          costs forward, biting into landlord cashflow before rental uplift
+          catches up. (iii) Construction cost inflation continues to be the key
+          sensitivity on D&amp;B economics.
+        </p>
+      </div>
+
+      <div class="page-foot">
+        <span>CPR Market Report&nbsp;·&nbsp;Q3 2026</span>
+        <span>08</span>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 9 — ABOUT CPR                                       -->
+    <!-- ======================================================== -->
+    <section class="page">
+      <div class="page-head">
+        <span>CPR Q3 2026 Market Report</span>
+        <span>Section 07&nbsp;·&nbsp;About CPR</span>
+      </div>
+
+      <div class="section-header">
+        <span class="eyebrow">Section 07 — About CPR</span>
+        <div class="eyebrow-rule"></div>
+        <h2 class="section-title">
+          Rotherham's commercial property specialists
+        </h2>
+      </div>
+
+      <p>
+        Commercial Property Rotherham (CPR) is the borough's dedicated
+        commercial property practice, regulated by the Royal Institution of
+        Chartered Surveyors. We act for landlords, occupiers and investors on
+        commercial property across Rotherham and the wider South Yorkshire
+        market — and have done since the practice was founded.
+      </p>
+
+      <p>
+        Our work is built on a long instruction book, real local knowledge, and
+        the relationships that come from being on the ground. Every figure in
+        this report is grounded in a deal we have transacted, reviewed or
+        advised on. Where the data is partial we have said so.
+      </p>
+
+      <h4 style="margin-top: 6mm">Services</h4>
+      <ul class="services">
+        <li>Commercial agency — lettings &amp; sales</li>
+        <li>Acquisitions &amp; tenant representation</li>
+        <li>Rent reviews &amp; lease renewals</li>
+        <li>Lease advisory — landlord &amp; tenant</li>
+        <li>RICS valuations — secured lending, tax, dispute</li>
+        <li>Investment sales &amp; purchases</li>
+        <li>Property management &amp; service charge</li>
+        <li>Building consultancy &amp; dilapidations</li>
+        <li>Development consultancy &amp; viability</li>
+        <li>Strategic asset management advice</li>
+      </ul>
+
+      <h4>Sectors</h4>
+      <p style="margin-bottom: 6mm">
+        Offices&nbsp;·&nbsp;Industrial &amp; logistics&nbsp;·&nbsp;Retail
+        (in-town and out-of-town)&nbsp;·&nbsp;Leisure &amp;
+        F&amp;B&nbsp;·&nbsp;Healthcare-adjacent&nbsp;·&nbsp;Roadside&nbsp;·&nbsp;Mixed-use
+        development
+      </p>
+
+      <div class="contact-block">
+        <div>
+          <div class="lab">Office</div>
+          <div class="val">Rotherham</div>
+          <div style="font-size: 8.5pt; color: #666; margin-top: 1mm">
+            South Yorkshire
+          </div>
+        </div>
+        <div>
+          <div class="lab">Telephone</div>
+          <div class="val">01709 000 000</div>
+          <div style="font-size: 8.5pt; color: #666; margin-top: 1mm">
+            Mon–Fri 09:00–17:30
+          </div>
+        </div>
+        <div>
+          <div class="lab">Email</div>
+          <div class="val">enquiries@cprcommercial.co.uk</div>
+          <div style="font-size: 8.5pt; color: #666; margin-top: 1mm">
+            Direct response within 1 working day
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          margin-top: 8mm;
+          padding: 5mm 6mm;
+          border: 0.5pt solid var(--rule-grey);
+          font-size: 8.5pt;
+        "
+      >
+        <strong style="color: var(--charcoal)"
+          >Regulated by the Royal Institution of Chartered Surveyors.</strong
+        >&nbsp; All work is carried out under the RICS Rules of Conduct and,
+        where applicable, the relevant RICS Professional Standards (including
+        the Red Book and the Service Charge Code). CPR holds professional
+        indemnity cover at a level appropriate to the work it undertakes.
+      </div>
+
+      <div class="page-foot">
+        <span>CPR Market Report&nbsp;·&nbsp;Q3 2026</span>
+        <span>09</span>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 10 — METHODOLOGY                                    -->
+    <!-- ======================================================== -->
+    <section class="page">
+      <div class="page-head">
+        <span>CPR Q3 2026 Market Report</span>
+        <span>Section 08&nbsp;·&nbsp;Methodology &amp; disclaimers</span>
+      </div>
+
+      <div class="section-header">
+        <span class="eyebrow">Section 08 — Methodology &amp; disclaimers</span>
+        <div class="eyebrow-rule"></div>
+        <h2 class="section-title">How this report is built</h2>
+      </div>
+
+      <div style="margin-bottom: 8mm">
+        <span class="illustrative"
+          >Illustrative draft — figures in this document are demonstration
+          data</span
+        >
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h4>Data sources</h4>
+          <div class="fineprint">
+            <p>
+              This report is compiled from four sources, in priority order: (i)
+              CPR's own instruction book — lettings, sales, rent reviews, lease
+              renewals and valuations transacted or reviewed by the practice in
+              the reference quarter; (ii) confirmed peer-group transactions,
+              cross-checked with the relevant agent or solicitor; (iii)
+              Rotherham MBC planning records and the South Yorkshire MCA growth
+              plan publications; (iv) HM Land Registry records for completed
+              investment transactions.
+            </p>
+            <p>
+              Where a figure is drawn from a single confirmed source, or where
+              the data set is partial, the relevant section narrative says so.
+              Confidential transactions are reported in aggregate only.
+            </p>
+          </div>
+
+          <h4 style="margin-top: 6mm">Definitions</h4>
+          <div class="fineprint">
+            <p>
+              <strong>Prime rent / yield.</strong> The headline rent or yield
+              achievable on a notional best-in-class building of the relevant
+              type, let on standard institutional terms (typically 10 years,
+              FRI, with five-year reviews) to a covenant of investment grade.
+            </p>
+            <p>
+              <strong>Take-up.</strong> Total floorspace let or sold to an
+              occupier in the reference period, measured net internal area for
+              offices and gross internal area for industrial.
+            </p>
+            <p>
+              <strong>Net effective rent.</strong> Headline rent adjusted for
+              rent-free, capital contributions and any other tenant inducement,
+              expressed over the term certain.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h4>Methodology notes</h4>
+          <div class="fineprint">
+            <p>
+              Sub-market boundaries follow CPR's working geography for
+              Rotherham, which broadly aligns with Rotherham MBC ward groupings.
+              The "hinterland" coverage extends to Wath-upon-Dearne, Maltby,
+              Dinnington, Manvers and the Sheffield-Rotherham boundary along
+              Templeborough.
+            </p>
+            <p>
+              YoY comparisons are quarter-on-quarter same-period — Q3 2026 vs Q3
+              2025. QoQ comparisons (used for yields) are sequential quarters —
+              Q3 2026 vs Q2 2026. Five-year averages cover Q3 2021 to Q3 2025
+              inclusive.
+            </p>
+            <p>
+              Yields are reported on a Net Initial Yield basis on let stock and
+              on a notional reversionary basis where stock is vacant or
+              under-rented.
+            </p>
+          </div>
+
+          <h4 style="margin-top: 6mm">Disclaimer</h4>
+          <div class="fineprint">
+            <p>
+              This report is published by Commercial Property Rotherham for
+              general market information. It is not, and should not be relied on
+              as, formal investment, valuation or lease advice on any specific
+              property or transaction. Anyone considering a transaction in any
+              property referenced in this report should take specific written
+              advice from CPR or another suitably qualified RICS-regulated
+              adviser. CPR accepts no liability for any loss or damage arising
+              from reliance on this report.
+            </p>
+            <p>
+              The figures presented in this draft are illustrative and intended
+              to demonstrate the format, structure and analytical depth of the
+              quarterly market report deliverable.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          margin-top: 12mm;
+          padding-top: 6mm;
+          border-top: 0.5pt solid var(--rule-grey);
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+        "
+      >
+        <div>
+          <div
+            style="
+              font-family: &quot;Tenor Sans&quot;, serif;
+              font-size: 13pt;
+              color: var(--charcoal);
+            "
+          >
+            Commercial Property Rotherham
+          </div>
+          <div
+            style="
+              font-size: 8pt;
+              letter-spacing: 0.12em;
+              text-transform: uppercase;
+              color: #888;
+              margin-top: 1mm;
+            "
+          >
+            RICS Regulated&nbsp;·&nbsp;© CPR 2026&nbsp;·&nbsp;Q3 2026 Market
+            Report
+          </div>
+        </div>
+        <div style="text-align: right">
+          <div class="hillway-mark">
+            Produced via <strong>Hillway</strong> AI workflow
+          </div>
+          <div
+            style="
+              font-size: 7pt;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              color: #aaa;
+              margin-top: 1mm;
+            "
+          >
+            hillway-property.co.uk
+          </div>
+        </div>
+      </div>
+
+      <div class="page-foot">
+        <span>CPR Market Report&nbsp;·&nbsp;Q3 2026</span>
+        <span>10</span>
+      </div>
+    </section>
+  </body>
+</html>

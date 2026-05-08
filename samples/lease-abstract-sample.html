@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+<script>(function(){if(typeof sessionStorage!=='undefined'&&sessionStorage.getItem('cpr_unlocked')!=='1'){window.location.replace('../cobranded.html');}})();</script>
+
+    <meta charset="UTF-8" />
+    <title>Lease Abstract — 15 High Street, Rotherham S60 1PR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cpr-red: #bd1622;
+        --charcoal: #1d1d1b;
+        --body: #575756;
+        --row: #f8f8f8;
+        --rule: #e3e3e1;
+        --rule-strong: #c9c9c4;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #ececec;
+        font-family: "Montserrat", system-ui, sans-serif;
+        font-size: 9.5pt;
+        line-height: 1.42;
+        color: var(--body);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 18px auto;
+        padding: 14mm 14mm 12mm 14mm;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        position: relative;
+      }
+      /* ----- HEADER ----- */
+      .header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--cpr-red);
+      }
+      .header .logo img {
+        height: 38px;
+        display: block;
+      }
+      .header .doc-meta {
+        text-align: right;
+      }
+      .header .eyebrow {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 9pt;
+        letter-spacing: 0.22em;
+        color: var(--cpr-red);
+        text-transform: uppercase;
+      }
+      .header .property-title {
+        font-family: "Tenor Sans", serif;
+        font-size: 16pt;
+        color: var(--charcoal);
+        margin-top: 4px;
+        line-height: 1.15;
+      }
+      .header .property-sub {
+        font-size: 9pt;
+        color: var(--body);
+        margin-top: 2px;
+      }
+
+      /* ----- METADATA BAR ----- */
+      .meta-bar {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0;
+        margin-top: 10px;
+        border: 1px solid var(--rule);
+        background: var(--row);
+      }
+      .meta-bar .cell {
+        padding: 6px 9px;
+        border-right: 1px solid var(--rule);
+      }
+      .meta-bar .cell:last-child {
+        border-right: none;
+      }
+      .meta-bar .label {
+        font-size: 7pt;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--body);
+        font-weight: 600;
+      }
+      .meta-bar .value {
+        font-size: 9pt;
+        color: var(--charcoal);
+        font-weight: 500;
+        margin-top: 1px;
+      }
+      .status-badge {
+        display: inline-block;
+        background: var(--cpr-red);
+        color: #fff;
+        font-size: 7.5pt;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 2px;
+        margin-top: 1px;
+      }
+
+      /* ----- SECTIONS ----- */
+      h2.section {
+        font-family: "Tenor Sans", serif;
+        font-size: 11.5pt;
+        color: var(--charcoal);
+        margin: 14px 0 5px 0;
+        padding: 4px 0 4px 0;
+        border-bottom: 1px solid var(--rule-strong);
+        letter-spacing: 0.02em;
+      }
+      h2.section .num {
+        color: var(--cpr-red);
+        font-weight: 400;
+        margin-right: 8px;
+        font-size: 10.5pt;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      /* ----- ABSTRACT TABLES ----- */
+      table.abstract {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 8.8pt;
+        margin-top: 4px;
+      }
+      table.abstract th {
+        background: var(--cpr-red);
+        color: #fff;
+        text-align: left;
+        padding: 5px 8px;
+        font-weight: 600;
+        font-size: 8pt;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      table.abstract td {
+        padding: 4px 8px;
+        border-bottom: 1px solid var(--rule);
+        vertical-align: top;
+      }
+      table.abstract tr:nth-child(even) td {
+        background: var(--row);
+      }
+      table.abstract td.label {
+        width: 32%;
+        font-weight: 600;
+        color: var(--charcoal);
+      }
+      table.abstract td.value {
+        color: var(--body);
+      }
+
+      /* Single-column variant for the side-by-side panels */
+      table.compact td.label {
+        width: 38%;
+      }
+
+      /* ----- KEY DATES ----- */
+      table.keydates {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 8.8pt;
+        margin-top: 4px;
+      }
+      table.keydates th {
+        background: var(--cpr-red);
+        color: #fff;
+        text-align: left;
+        padding: 5px 8px;
+        font-weight: 600;
+        font-size: 8pt;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      table.keydates td {
+        padding: 5px 8px;
+        border-bottom: 1px solid var(--rule);
+        vertical-align: top;
+      }
+      table.keydates tr:nth-child(even) td {
+        background: var(--row);
+      }
+      table.keydates td.date {
+        width: 18%;
+        font-weight: 600;
+        color: var(--charcoal);
+        white-space: nowrap;
+      }
+      table.keydates td.event {
+        width: 30%;
+        color: var(--charcoal);
+        font-weight: 500;
+      }
+      table.keydates td.action {
+        color: var(--body);
+      }
+
+      /* ----- CITATION TAG ----- */
+      .cite {
+        display: inline-block;
+        font-family: "JetBrains Mono", "Menlo", monospace;
+        font-size: 6.8pt;
+        font-weight: 500;
+        color: var(--cpr-red);
+        background: #fbeaec;
+        border: 1px solid #f1c5cb;
+        padding: 1px 5px;
+        border-radius: 2px;
+        margin-left: 4px;
+        vertical-align: 1px;
+        white-space: nowrap;
+        letter-spacing: 0.02em;
+      }
+
+      .redact {
+        display: inline-block;
+        background: #1d1d1b;
+        color: #1d1d1b;
+        user-select: none;
+        border-radius: 1px;
+        padding: 0 4px;
+        margin: 0 1px;
+      }
+      .redact-label {
+        background: #efe7e7;
+        border: 1px dashed #bd1622;
+        color: #bd1622;
+        font-size: 7.5pt;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        padding: 1px 5px;
+        border-radius: 2px;
+      }
+
+      ul.tight {
+        margin: 2px 0 0 0;
+        padding-left: 16px;
+      }
+      ul.tight li {
+        margin-bottom: 1px;
+      }
+
+      /* ----- FOOTER ----- */
+      .source-note {
+        font-style: italic;
+        font-size: 7.8pt;
+        color: var(--body);
+        margin-top: 14px;
+        padding: 6px 10px;
+        background: var(--row);
+        border-left: 3px solid var(--cpr-red);
+      }
+
+      .footer {
+        margin-top: 14px;
+        padding-top: 8px;
+        border-top: 1px solid var(--rule-strong);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 7.5pt;
+        color: var(--body);
+      }
+      .footer .cpr-line {
+        font-weight: 600;
+        color: var(--charcoal);
+        letter-spacing: 0.04em;
+      }
+      .footer .hillway-mark {
+        font-size: 7pt;
+        color: #888;
+        text-align: right;
+        font-style: italic;
+      }
+      .footer .hillway-mark strong {
+        color: var(--charcoal);
+        font-style: normal;
+      }
+
+      /* ----- PRINT ----- */
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+      @media print {
+        body {
+          background: #fff;
+        }
+        .page {
+          box-shadow: none;
+          margin: 0;
+          page-break-after: always;
+        }
+        .page-break {
+          page-break-before: always;
+        }
+      }
+
+      .nowrap {
+        white-space: nowrap;
+      }
+      .ralign {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- HEADER -->
+      <div class="header">
+        <div class="logo">
+          <img src="../cpr-logo.svg" alt="Commercial Property Rotherham" />
+        </div>
+        <div class="doc-meta">
+          <div class="eyebrow">Lease Abstract</div>
+          <div class="property-title">15 High Street, Rotherham</div>
+          <div class="property-sub">
+            S60 1PR &nbsp;·&nbsp; Class E retail unit with ancillary
+          </div>
+        </div>
+      </div>
+
+      <!-- METADATA BAR -->
+      <div class="meta-bar">
+        <div class="cell">
+          <div class="label">Date prepared</div>
+          <div class="value">8 May 2026</div>
+        </div>
+        <div class="cell">
+          <div class="label">Reference</div>
+          <div class="value">LA/2026/RH-001</div>
+        </div>
+        <div class="cell">
+          <div class="label">Prepared by</div>
+          <div class="value">
+            CPR <span style="color: #888">via Hillway</span>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="label">Source</div>
+          <div class="value">Lease dated 1 Sep 2023 (PDF, 47pp)</div>
+        </div>
+        <div class="cell">
+          <div class="label">Status</div>
+          <div><span class="status-badge">Draft for landlord review</span></div>
+        </div>
+      </div>
+
+      <!-- 1. PARTIES -->
+      <h2 class="section"><span class="num">1.</span>Parties</h2>
+      <table class="abstract">
+        <tr>
+          <td class="label">Landlord</td>
+          <td class="value">
+            <span class="redact-label">Client A — redacted</span> &nbsp;
+            (registered proprietor, Title No. SYK<span class="redact"
+              >XXXXXX</span
+            >) <span class="cite">[Parties, p.1]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Tenant</td>
+          <td class="value">
+            [Redacted Tenant Ltd] &nbsp; (Co. No. 0<span class="redact"
+              >XXXXXXX</span
+            >) — registered office redacted
+            <span class="cite">[Parties, p.1]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Guarantor</td>
+          <td class="value">
+            None at grant. Authorised Guarantee Agreement (AGA) required on
+            assignment <span class="cite">[Cl 8.4.3]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Surety / Rent deposit</td>
+          <td class="value">
+            Rent deposit £17,500 (equiv. 6 months' rent + VAT) held under
+            separate Rent Deposit Deed of even date
+            <span class="cite">[Cl 3.5; RDD]</span>
+          </td>
+        </tr>
+      </table>
+
+      <!-- 2. PROPERTY -->
+      <h2 class="section">
+        <span class="num">2.</span>Property &amp; Permitted Use
+      </h2>
+      <table class="abstract">
+        <tr>
+          <td class="label">Demise</td>
+          <td class="value">
+            Ground floor retail unit and basement ancillary, 15 High Street,
+            Rotherham, S60 1PR. Approx. <strong>1,420 sq ft</strong> NIA (ground
+            980 sq ft / basement 440 sq ft). Plan attached at Schedule 1.
+            <span class="cite">[Cl 1.1; Sch 1]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Common parts / rights</td>
+          <td class="value">
+            Right of way over service yard to rear (24/7); right to connect to
+            and use existing service media. Reserved: landlord's right of entry
+            on 48hr notice (emergency excepted).
+            <span class="cite">[Sch 2, Pts 1–2]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">EPC rating</td>
+          <td class="value">
+            C (72) — certificate dated 12 Jul 2023, valid to 11 Jul 2033.
+            MEES-compliant for letting (≥ E). <span class="cite">[Sch 6]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Permitted user</td>
+          <td class="value">
+            Use Class E (any sub-class) save not as: betting office, pawnbroker,
+            sex shop, or amusement arcade. Change within Class E permitted with
+            landlord's consent (not to be unreasonably withheld).
+            <span class="cite">[Cl 6.1; Cl 6.1.4]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Hours of opening</td>
+          <td class="value">
+            07:00–23:00 daily. Tenant to keep open and trading during normal
+            retail hours (Mon–Sat 09:00–17:30).
+            <span class="cite">[Cl 6.2]</span>
+          </td>
+        </tr>
+      </table>
+
+      <!-- TERM + RENT side-by-side -->
+      <div class="two-col">
+        <div>
+          <h2 class="section"><span class="num">3.</span>Term</h2>
+          <table class="abstract compact">
+            <tr>
+              <td class="label">Commencement</td>
+              <td class="value">
+                1 September 2023 <span class="cite">[Cl 2.1]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Term length</td>
+              <td class="value">10 years</td>
+            </tr>
+            <tr>
+              <td class="label">Expiry</td>
+              <td class="value">
+                31 August 2033 <span class="cite">[Cl 2.1]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">1954 Act</td>
+              <td class="value">
+                Contracted <strong>OUT</strong> of ss.24–28 LTA 1954. Warning
+                notice + statutory declaration completed 24 Aug 2023.
+                <span class="cite">[Cl 2.4; Recital D]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Holding over</td>
+              <td class="value">
+                Tenancy at will only — no statutory renewal right.
+                <span class="cite">[Cl 2.4.3]</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <h2 class="section"><span class="num">4.</span>Rent</h2>
+          <table class="abstract compact">
+            <tr>
+              <td class="label">Initial rent</td>
+              <td class="value">
+                <strong>£35,000 p.a. exclusive</strong> (£24.65/sq ft overall)
+                <span class="cite">[Cl 3.1]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Frequency</td>
+              <td class="value">Quarterly in advance, in equal instalments</td>
+            </tr>
+            <tr>
+              <td class="label">Quarter days</td>
+              <td class="value">
+                Usual English (25 Mar / 24 Jun / 29 Sep / 25 Dec)
+                <span class="cite">[Cl 3.2]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Payment</td>
+              <td class="value">
+                By BACS to landlord's nominated account; no deduction or set-off
+                <span class="cite">[Cl 3.3]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">VAT</td>
+              <td class="value">
+                Property is <strong>elected</strong> for VAT (option to tax
+                exercised 14 Mar 2018) — VAT chargeable on rent and all
+                outgoings <span class="cite">[Cl 3.4]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Interest on arrears</td>
+              <td class="value">
+                4% above Barclays Bank base rate, from due date until payment
+                <span class="cite">[Cl 3.6]</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 5. RENT REVIEWS -->
+      <h2 class="section"><span class="num">5.</span>Rent Reviews</h2>
+      <table class="abstract">
+        <tr>
+          <td class="label">Mechanism</td>
+          <td class="value">
+            Open Market Rental Value, <strong>upward-only</strong>, between
+            willing landlord &amp; willing tenant
+            <span class="cite">[Sch 3, Pt 1, ¶1]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Review pattern</td>
+          <td class="value">
+            5-yearly: <strong>1 September 2028</strong> (single review in the
+            term) <span class="cite">[Sch 3, Pt 1, ¶2]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Time of essence?</td>
+          <td class="value">
+            <strong>No</strong> — landlord may trigger at any time before
+            expiry; reviewed rent backdated to RRD with interest at base rate
+            (no premium) <span class="cite">[Sch 3, Pt 1, ¶3]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Assumptions</td>
+          <td class="value">
+            <ul class="tight">
+              <li>
+                Premises available with vacant possession on the open market
+              </li>
+              <li>
+                Term equal to the residue or 10 years, whichever the greater
+              </li>
+              <li>All tenant covenants performed</li>
+              <li>
+                Premises fitted out and ready for occupation as a Class E retail
+                unit
+              </li>
+            </ul>
+            <span class="cite">[Sch 3, Pt 1, ¶4]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Disregards</td>
+          <td class="value">
+            <ul class="tight">
+              <li>Tenant's occupation</li>
+              <li>Goodwill attributable to tenant's business</li>
+              <li>
+                Tenant's improvements (other than those required by statute or
+                carried out under an obligation to the landlord)
+              </li>
+            </ul>
+            <span class="cite">[Sch 3, Pt 1, ¶5]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Dispute resolution</td>
+          <td class="value">
+            Independent expert (RICS-appointed) —
+            <strong>not</strong> arbitrator. Costs shared equally unless expert
+            directs otherwise. <span class="cite">[Sch 3, Pt 1, ¶7]</span>
+          </td>
+        </tr>
+      </table>
+
+      <!-- 6 + 7 side-by-side: TENANT and LANDLORD covenants -->
+      <div class="two-col">
+        <div>
+          <h2 class="section"><span class="num">6.</span>Tenant Covenants</h2>
+          <table class="abstract compact">
+            <tr>
+              <td class="label">Repair</td>
+              <td class="value">
+                Full repairing — to keep in
+                <strong>good and substantial repair and condition</strong>, fair
+                wear and tear NOT excepted; including replacement where required
+                <span class="cite">[Cl 4.1]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Schedule of Condition</td>
+              <td class="value">
+                <strong>None</strong> — repair obligation is unqualified
+                <span class="cite">[Cl 4.1.2]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Decoration</td>
+              <td class="value">
+                Internal: every 5th year &amp; final year. External: every 3rd
+                year &amp; final year, in colours approved by landlord
+                <span class="cite">[Cl 4.2]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Yielding up</td>
+              <td class="value">
+                Reinstate all alterations unless landlord serves written waiver
+                ≥ 6 months before expiry <span class="cite">[Cl 4.3]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Alterations</td>
+              <td class="value">
+                Structural / external: <strong>absolutely prohibited</strong>.
+                Non-structural internal: with landlord's written consent (not
+                unreasonably withheld), Licence for Alterations required
+                <span class="cite">[Cl 7.1; 7.2]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Alienation — assignment</td>
+              <td class="value">
+                Permitted of <strong>whole only</strong> with landlord's consent
+                (not unreasonably withheld), subject to AGA &amp; (if reasonably
+                required) guarantor / rent deposit
+                <span class="cite">[Cl 8.4]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Alienation — underletting</td>
+              <td class="value">
+                Whole only; at no less than passing rent or OMRV (whichever
+                higher); on substantially the same terms; tenant to procure
+                direct covenants <span class="cite">[Cl 8.5]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Sharing / charging</td>
+              <td class="value">
+                Sharing with group company permitted on notice. Charging of
+                leasehold interest absolutely prohibited
+                <span class="cite">[Cl 8.6; 8.7]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Statutory compliance</td>
+              <td class="value">
+                Tenant to comply with all statutes, regulations, planning &amp;
+                environmental requirements affecting the Property
+                <span class="cite">[Cl 9.1]</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <h2 class="section"><span class="num">7.</span>Landlord Covenants</h2>
+          <table class="abstract compact">
+            <tr>
+              <td class="label">Quiet enjoyment</td>
+              <td class="value">
+                Standard — subject to tenant paying rent and observing covenants
+                <span class="cite">[Cl 5.1]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Insurance</td>
+              <td class="value">
+                Landlord to insure the building (not contents) for full
+                reinstatement value, plus 3 years' loss of rent
+                <span class="cite">[Cl 5.2; Sch 4]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Common parts</td>
+              <td class="value">
+                To maintain rear service yard and shared service media in good
+                condition (recoverable via service charge)
+                <span class="cite">[Cl 5.3]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Service charge cap</td>
+              <td class="value">
+                <strong>None expressly given</strong>. Tenant has comfort that
+                costs must be properly and reasonably incurred (RICS Service
+                Charge Code referenced) <span class="cite">[Sch 5, ¶3]</span>
+              </td>
+            </tr>
+          </table>
+
+          <h2 class="section"><span class="num">8.</span>Service Charge</h2>
+          <table class="abstract compact">
+            <tr>
+              <td class="label">Mechanism</td>
+              <td class="value">
+                Schedule 5 — fixed list of recoverable services covering common
+                parts, structure (excluding landlord-retained), management fee
+                10% of total <span class="cite">[Sch 5, ¶1]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Apportionment</td>
+              <td class="value">
+                By NIA — currently <strong>23.4%</strong> of total scheme costs
+                (subject to fair adjustment)
+                <span class="cite">[Sch 5, ¶2]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Year</td>
+              <td class="value">1 April – 31 March</td>
+            </tr>
+            <tr>
+              <td class="label">On account</td>
+              <td class="value">
+                Quarterly with rent; current budget £4,200 p.a. (2025/26)
+                <span class="cite">[Sch 5, ¶4]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Reconciliation</td>
+              <td class="value">
+                Within 4 months of year-end; balancing payment / credit within
+                21 days of certificate <span class="cite">[Sch 5, ¶5]</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Excluded items</td>
+              <td class="value">
+                Initial construction defects, costs recoverable under insurance,
+                landlord's own management overheads outside the 10% fee
+                <span class="cite">[Sch 5, ¶6]</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 9. BREAK CLAUSES -->
+      <h2 class="section"><span class="num">9.</span>Break Clauses</h2>
+      <table class="abstract">
+        <tr>
+          <td class="label">Tenant break</td>
+          <td class="value">
+            <strong>Yes</strong> — single tenant-only break on
+            <strong>31 August 2028</strong> (5th anniversary of term
+            commencement) <span class="cite">[Cl 10.1]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Notice period</td>
+          <td class="value">
+            Not less than <strong>6 months'</strong> prior written notice — i.e.
+            by <strong>28 February 2028</strong>
+            <span class="cite">[Cl 10.1.1]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Conditions precedent</td>
+          <td class="value">
+            <ul class="tight">
+              <li>All rent (principal only) paid up to break date</li>
+              <li>
+                Vacant possession given on break date, free of third-party
+                occupational interests
+              </li>
+              <li>
+                Tenant pays a break premium of <strong>£17,500</strong> (equiv.
+                6 months' rent) on or before break date
+              </li>
+            </ul>
+            Compliance with repair / decoration covenants is
+            <strong>NOT</strong> a precondition (deliberately excluded —
+            landlord retains a damages claim post-break).
+            <span class="cite">[Cl 10.1.2–10.1.4]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Landlord break</td>
+          <td class="value">None</td>
+        </tr>
+        <tr>
+          <td class="label">Apportionment of rent</td>
+          <td class="value">
+            No express refund of rent paid in advance for the period after the
+            break date — tenant should diarise serving notice for a quarter day
+            <span class="cite">[Cl 10.1.5]</span>
+          </td>
+        </tr>
+      </table>
+
+      <!-- 10. INSURANCE -->
+      <h2 class="section"><span class="num">10.</span>Insurance</h2>
+      <table class="abstract">
+        <tr>
+          <td class="label">Insured by</td>
+          <td class="value">
+            Landlord (block policy) <span class="cite">[Cl 5.2]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Insured risks</td>
+          <td class="value">
+            Standard comprehensive perils including fire, lightning, explosion,
+            storm, flood, escape of water, impact, riot, malicious damage,
+            terrorism (subject to availability and economic terms)
+            <span class="cite">[Sch 4, ¶1]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Insurance rent</td>
+          <td class="value">
+            Tenant reimburses 100% of premium attributable to the Property
+            within 21 days of demand <span class="cite">[Cl 3.7]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Reinstatement</td>
+          <td class="value">
+            Landlord to reinstate as soon as reasonably practicable using
+            insurance proceeds; tenant to make good any uninsured shortfall
+            <strong>only</strong> if caused by tenant default
+            <span class="cite">[Sch 4, ¶3]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Suspension of rent</td>
+          <td class="value">
+            Rent and service charge suspended for up to
+            <strong>3 years</strong> from date of damage if Property rendered
+            unfit (insured risk) <span class="cite">[Sch 4, ¶4]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Termination right</td>
+          <td class="value">
+            Either party may determine if Property not reinstated within 3 years
+            of damage <span class="cite">[Sch 4, ¶5]</span>
+          </td>
+        </tr>
+      </table>
+
+      <!-- 11. OTHER KEY -->
+      <h2 class="section"><span class="num">11.</span>Other Key Provisions</h2>
+      <table class="abstract">
+        <tr>
+          <td class="label">Side letter — turnover concession</td>
+          <td class="value">
+            <strong>None on file.</strong> Confirm with landlord whether any
+            concessionary letters were issued at grant.
+            <em style="color: #bd1622">[Verification required]</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Cap on dilapidations</td>
+          <td class="value">
+            None — terminal dilapidations claim uncapped, subject to s.18(1)
+            Landlord and Tenant Act 1927 <span class="cite">[Cl 4.4]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Step-up rent</td>
+          <td class="value">
+            None — flat £35,000 p.a. until first review (Sept 2028)
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Rent-free / inducement at grant</td>
+          <td class="value">
+            3-month rent free, expired 30 Nov 2023 (relevant to OMRV assumption
+            at review) <span class="cite">[Cl 3.1.2]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Landlord's costs</td>
+          <td class="value">
+            Tenant to pay all proper costs of any consent application, breach,
+            or s.146 notice (whether or not proceedings issued)
+            <span class="cite">[Cl 11.1]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Forfeiture</td>
+          <td class="value">
+            21 days for non-payment; reasonable period for other breach
+            following s.146 notice <span class="cite">[Cl 12.1]</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Jurisdiction</td>
+          <td class="value">
+            England &amp; Wales; courts of England exclusive
+            <span class="cite">[Cl 13.4]</span>
+          </td>
+        </tr>
+      </table>
+
+      <!-- 12. KEY DATES SUMMARY -->
+      <h2 class="section"><span class="num">12.</span>Key Dates &amp; Diary</h2>
+      <table class="keydates">
+        <tr>
+          <th style="width: 18%">Date</th>
+          <th style="width: 30%">Event</th>
+          <th>Action required</th>
+        </tr>
+        <tr>
+          <td class="date">28 Feb 2028</td>
+          <td class="event">Tenant break notice longstop</td>
+          <td class="action">
+            If tenant intends to break, written notice must be served by this
+            date (≥ 6 months before 31 Aug 2028).
+            <strong>Landlord action:</strong> diarise; if no notice received by
+            1 Mar 2028, treat term as committed to expiry.
+          </td>
+        </tr>
+        <tr>
+          <td class="date">1 Sep 2028</td>
+          <td class="event">Rent review trigger (RRD)</td>
+          <td class="action">
+            Instruct CPR to commence rent review process. Time NOT of essence —
+            review may be triggered later, but inflation drift recommends prompt
+            action.
+          </td>
+        </tr>
+        <tr>
+          <td class="date">31 Aug 2028</td>
+          <td class="event">Tenant break date</td>
+          <td class="action">
+            Verify break premium received and vacant possession given. Schedule
+            of dilapidations to be served thereafter (s.18 valuation to follow).
+          </td>
+        </tr>
+        <tr>
+          <td class="date">11 Jul 2033</td>
+          <td class="event">EPC expiry</td>
+          <td class="action">
+            Commission re-survey by Q1 2033 to confirm continued MEES compliance
+            ahead of expiry.
+          </td>
+        </tr>
+        <tr>
+          <td class="date">1 Mar 2033</td>
+          <td class="event">6 months before lease expiry</td>
+          <td class="action">
+            Issue terminal schedule of dilapidations &amp; quantified demand.
+            Note: lease is contracted out — no statutory renewal.
+          </td>
+        </tr>
+        <tr>
+          <td class="date">31 Aug 2033</td>
+          <td class="event">Lease expiry</td>
+          <td class="action">
+            Possession reverts. Reinstatement obligations crystallise unless
+            waiver served ≥ 6 months prior.
+          </td>
+        </tr>
+      </table>
+
+      <!-- SOURCE NOTE -->
+      <div class="source-note">
+        Every entry above is hyperlinked back to the source paragraph in the
+        underlying lease PDF — clause references in red
+        <span class="cite">[Cl X.Y]</span> resolve to the relevant page in the
+        original document for verification. Sample document for demonstration
+        purposes; tenant identity redacted.
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <div>
+          <div class="cpr-line">Commercial Property Rotherham</div>
+          <div>01709 721706 &nbsp;·&nbsp; info@cprotherham.com</div>
+        </div>
+        <div class="hillway-mark">
+          Generated via <strong>Hillway AI</strong> workflow — drop a PDF,
+          receive this in ~2 minutes
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
