@@ -1,7 +1,16 @@
 <!doctype html>
 <html lang="en-GB">
   <head>
-<script>(function(){if(typeof sessionStorage!=='undefined'&&localStorage.getItem('cpr_unlocked')!=='1'){window.location.replace('../cobranded.html');}})();</script>
+    <script>
+      (function () {
+        if (
+          typeof sessionStorage !== "undefined" &&
+          localStorage.getItem("cpr_unlocked") !== "1"
+        ) {
+          window.location.replace("../cobranded.html");
+        }
+      })();
+    </script>
 
     <meta charset="UTF-8" />
     <title>Rotherham Commercial Property Market Report — Q3 2026 | CPR</title>
@@ -265,15 +274,16 @@
       /* ---------- HEADLINE STATS ---------- */
       .stat-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 4mm;
         margin: 6mm 0 8mm 0;
       }
       .stat {
         border: 0.5pt solid var(--rule-grey);
-        padding: 7mm 6mm 6mm 6mm;
+        padding: 6mm 7mm 5mm 7mm;
         background: #fff;
         position: relative;
+        min-width: 0;
       }
       .stat::before {
         content: "";
@@ -299,11 +309,13 @@
         line-height: 1;
         color: var(--charcoal);
         margin-bottom: 3mm;
+        white-space: nowrap;
       }
       .stat .figure .unit {
         font-size: 14pt;
         color: var(--body-grey);
         margin-left: 1mm;
+        white-space: nowrap;
       }
       .stat .delta {
         font-family: "Montserrat", sans-serif;
