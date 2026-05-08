@@ -1,0 +1,2408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hillway × CPR — AI Embed Proposal (co-branded)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="AI Embed & Workflow Automation proposal prepared for Commercial Property Rotherham by Hillway. Onboarded May. Operational August."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #000;
+        --ink-2: #1a1a1a;
+        --ink-3: #333;
+        --ink-4: #666;
+        --ink-5: #999;
+        --line: #e5e5e5;
+        --line-dim: rgba(255, 255, 255, 0.14);
+        --paper: #fff;
+        --cream: #f5f5f5;
+        --accent: #bd1622;
+        --accent-soft: #fbe5e7;
+        --green: #059669;
+        --serif: "Tenor Sans", "Times New Roman", serif;
+        --sans: "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
+        --max: 1280px;
+        --pad: clamp(24px, 5vw, 80px);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--paper);
+        color: var(--ink-2);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Utilities */
+      .eyebrow {
+        font-family: var(--sans);
+        font-weight: 500;
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .eyebrow.muted {
+        color: var(--ink-4);
+      }
+      .eyebrow.light {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .tiny {
+        font-family: var(--sans);
+        font-weight: 400;
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ink-4);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ========== TOP NAV ========== */
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        padding: 18px var(--pad);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0);
+        transition:
+          background 0.3s ease,
+          backdrop-filter 0.3s ease,
+          padding 0.3s ease;
+        color: #fff;
+      }
+      .nav.scrolled {
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(12px);
+        padding: 14px var(--pad);
+        color: #fff;
+      }
+      .nav .brandmark {
+        font-family: var(--serif);
+        font-size: 18px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+      }
+      .nav ul {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .nav a {
+        opacity: 0.65;
+        transition: opacity 0.2s;
+      }
+      .nav a:hover {
+        opacity: 1;
+      }
+      .nav .cta {
+        padding: 8px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 999px;
+        transition:
+          background 0.2s,
+          border-color 0.2s;
+      }
+      .nav .cta:hover {
+        background: var(--accent);
+        border-color: var(--accent);
+        opacity: 1;
+      }
+      @media (max-width: 880px) {
+        .nav ul {
+          display: none;
+        }
+      }
+
+      /* ========== HERO ========== */
+      .hero {
+        background: #000;
+        color: #fff;
+        min-height: 100vh;
+        padding: 120px var(--pad) 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -200px;
+        right: -200px;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(189, 22, 34, 0.18) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .hero-inner {
+        max-width: var(--max);
+        margin: 0 auto;
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+      }
+      .hero-eyebrow {
+        color: var(--accent);
+        font-size: 12px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 32px;
+      }
+      .hero h1 {
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: clamp(48px, 8vw, 116px);
+        line-height: 1.02;
+        letter-spacing: -0.015em;
+        max-width: 1100px;
+        margin-bottom: 32px;
+      }
+      .hero h1 .accent {
+        color: var(--accent);
+      }
+      .hero-sub {
+        font-family: var(--serif);
+        font-size: clamp(18px, 2vw, 26px);
+        line-height: 1.45;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 760px;
+      }
+
+      .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        padding-top: 32px;
+        border-top: 1px solid var(--line-dim);
+        max-width: var(--max);
+        margin: 60px auto 0;
+        width: 100%;
+      }
+      .hero-meta .cell .lbl {
+        font-size: 10px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 8px;
+      }
+      .hero-meta .cell .val {
+        font-family: var(--sans);
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.45;
+      }
+      @media (max-width: 760px) {
+        .hero-meta {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+        }
+      }
+
+      /* ========== SECTION SHELL ========== */
+      section.bay {
+        padding: 140px var(--pad);
+        position: relative;
+      }
+      section.bay.dark {
+        background: #000;
+        color: #fff;
+      }
+      section.bay.cream {
+        background: var(--cream);
+      }
+      .bay-inner {
+        max-width: var(--max);
+        margin: 0 auto;
+      }
+      .bay-head {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 32px;
+        align-items: baseline;
+        margin-bottom: 64px;
+      }
+      .bay-head .num {
+        font-family: var(--serif);
+        font-size: 64px;
+        line-height: 1;
+        color: var(--accent);
+        letter-spacing: -0.02em;
+      }
+      .bay-head h2 {
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: clamp(36px, 5vw, 72px);
+        line-height: 1.05;
+        letter-spacing: -0.01em;
+        color: inherit;
+      }
+      .bay-head h2 .accent {
+        color: var(--accent);
+      }
+      .dark .bay-head h2 {
+        color: #fff;
+      }
+      .bay-lead {
+        font-family: var(--serif);
+        font-size: clamp(20px, 2.2vw, 28px);
+        line-height: 1.45;
+        color: var(--ink-3);
+        max-width: 880px;
+        margin-bottom: 40px;
+      }
+      .dark .bay-lead {
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      @media (max-width: 760px) {
+        section.bay {
+          padding: 80px var(--pad);
+        }
+        .bay-head {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+        .bay-head .num {
+          font-size: 40px;
+        }
+      }
+
+      /* ========== OPENING (Section 01) ========== */
+      .opening-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 48px;
+        margin-top: 80px;
+        padding-top: 48px;
+        border-top: 1.5px solid var(--ink);
+      }
+      .opening-grid .col h3 {
+        font-family: var(--serif);
+        font-size: 42px;
+        line-height: 1.1;
+        letter-spacing: -0.005em;
+        margin-bottom: 16px;
+        color: var(--ink);
+      }
+      .opening-grid .col h3 .accent {
+        color: var(--accent);
+      }
+      .opening-grid .col p {
+        font-size: 15px;
+        line-height: 1.65;
+        color: var(--ink-3);
+      }
+      .opening-grid .col .lbl {
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--ink-4);
+        margin-bottom: 14px;
+      }
+      @media (max-width: 880px) {
+        .opening-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+      }
+
+      /* ========== PULL QUOTE ========== */
+      .pullquote {
+        margin: 80px auto;
+        padding: 48px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+      }
+      .pullquote q {
+        font-family: var(--serif);
+        font-size: clamp(28px, 3.4vw, 44px);
+        line-height: 1.25;
+        color: var(--ink);
+        quotes: "\201C" "\201D";
+        display: block;
+      }
+      .pullquote q::before {
+        content: open-quote;
+        color: var(--accent);
+      }
+      .pullquote q::after {
+        content: close-quote;
+        color: var(--accent);
+      }
+      .pullquote cite {
+        display: block;
+        font-style: normal;
+        font-size: 12px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--ink-4);
+        margin-top: 24px;
+      }
+      .dark .pullquote q {
+        color: #fff;
+      }
+      .dark .pullquote {
+        border-color: var(--line-dim);
+      }
+      .dark .pullquote cite {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* ========== HEARD GRID (Section 02) ========== */
+      .heard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        border-top: 1px solid var(--line-dim);
+        border-left: 1px solid var(--line-dim);
+      }
+      .heard .item {
+        padding: 48px 40px;
+        border-right: 1px solid var(--line-dim);
+        border-bottom: 1px solid var(--line-dim);
+      }
+      .heard .item .tag {
+        display: inline-block;
+        font-size: 10px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 20px;
+      }
+      .heard .item .tag.warn {
+        color: #ff5b6f;
+      }
+      .heard .item h4 {
+        font-family: var(--serif);
+        font-size: 30px;
+        line-height: 1.15;
+        letter-spacing: -0.005em;
+        margin-bottom: 16px;
+        color: #fff;
+      }
+      .heard .item p {
+        font-family: var(--sans);
+        font-size: 15px;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      @media (max-width: 880px) {
+        .heard {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ========== PHASES (Section 03) ========== */
+      .phases {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 64px;
+        border-top: 1.5px solid var(--ink);
+      }
+      .phases .phase {
+        padding: 48px 40px 0 0;
+        position: relative;
+      }
+      .phases .phase + .phase {
+        border-left: 1px solid var(--line);
+        padding-left: 40px;
+      }
+      .phases .phase .num {
+        font-family: var(--serif);
+        font-size: 80px;
+        line-height: 1;
+        color: var(--accent);
+        letter-spacing: -0.02em;
+      }
+      .phases .phase .span {
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--ink-4);
+        margin-top: 14px;
+      }
+      .phases .phase .name {
+        font-family: var(--serif);
+        font-size: 36px;
+        line-height: 1.15;
+        margin-top: 8px;
+        margin-bottom: 32px;
+        color: var(--ink);
+      }
+      .phases .phase ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .phases .phase li {
+        font-family: var(--sans);
+        font-size: 14.5px;
+        line-height: 1.55;
+        color: var(--ink-3);
+        padding-left: 18px;
+        position: relative;
+      }
+      .phases .phase li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 11px;
+        width: 8px;
+        height: 1.5px;
+        background: var(--accent);
+      }
+      @media (max-width: 880px) {
+        .phases {
+          grid-template-columns: 1fr;
+        }
+        .phases .phase + .phase {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+          padding-left: 0;
+          padding-top: 48px;
+          margin-top: 32px;
+        }
+      }
+
+      /* ========== WORKFLOWS (Section 04) ========== */
+      .flows {
+        display: flex;
+        flex-direction: column;
+      }
+      .flow {
+        display: grid;
+        grid-template-columns: 120px 1fr 1fr;
+        gap: 48px;
+        padding: 40px 0;
+        border-top: 1px solid var(--line);
+        align-items: start;
+      }
+      .flow:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      .flow .n {
+        font-family: var(--serif);
+        font-size: 64px;
+        line-height: 1;
+        color: var(--accent);
+        letter-spacing: -0.02em;
+      }
+      .flow .title {
+        font-family: var(--serif);
+        font-size: 32px;
+        line-height: 1.15;
+        letter-spacing: -0.005em;
+        color: var(--ink);
+      }
+      .flow .desc {
+        font-family: var(--sans);
+        font-size: 15px;
+        line-height: 1.65;
+        color: var(--ink-3);
+      }
+      .flow .pill {
+        display: inline-block;
+        margin-top: 14px;
+        padding: 4px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ink-4);
+      }
+      .flow .pill.priority {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      @media (max-width: 880px) {
+        .flow {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          padding: 32px 0;
+        }
+        .flow .n {
+          font-size: 40px;
+        }
+        .flow .title {
+          font-size: 24px;
+        }
+      }
+
+      /* ========== TIMELINE (Section 05) ========== */
+      .tline {
+        margin-top: 64px;
+        border-top: 1.5px solid rgba(255, 255, 255, 0.7);
+        padding-top: 48px;
+      }
+      .tline-rail {
+        position: relative;
+        margin: 48px 0;
+        padding: 0 0 40px;
+      }
+      .tline-bar {
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          var(--accent),
+          rgba(255, 255, 255, 0.3)
+        );
+        position: relative;
+      }
+      .tline-marks {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 28px;
+        gap: 24px;
+      }
+      .tline-mark {
+        position: relative;
+      }
+      .tline-mark::before {
+        content: "";
+        position: absolute;
+        top: -39px;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        background: var(--accent);
+        border-radius: 50%;
+        box-shadow: 0 0 0 6px rgba(189, 22, 34, 0.18);
+      }
+      .tline-mark .week {
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.55);
+        margin-bottom: 8px;
+      }
+      .tline-mark .when {
+        font-family: var(--serif);
+        font-size: 22px;
+        line-height: 1.2;
+        color: #fff;
+        margin-bottom: 14px;
+      }
+      .tline-mark p {
+        font-size: 14px;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .tline-callout {
+        background: rgba(255, 91, 111, 0.1);
+        border-left: 3px solid #ff5b6f;
+        padding: 24px 28px;
+        margin-top: 48px;
+        border-radius: 0 8px 8px 0;
+      }
+      .tline-callout .lbl {
+        font-size: 10px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: #ff5b6f;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      .tline-callout p {
+        font-family: var(--serif);
+        font-size: 18px;
+        line-height: 1.5;
+        color: #fff;
+      }
+      @media (max-width: 880px) {
+        .tline-marks {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+
+      /* ========== INVESTMENT (Section 06) ========== */
+      .price-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 64px;
+      }
+      .price {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 48px 36px 40px;
+        background: #fff;
+        position: relative;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+      .price:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+      }
+      .price.featured {
+        border-color: var(--accent);
+        box-shadow: 0 24px 48px rgba(189, 22, 34, 0.12);
+      }
+      .price.featured::before {
+        content: "Recommended";
+        position: absolute;
+        top: -12px;
+        left: 36px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 4px 14px;
+        border-radius: 999px;
+      }
+      .price .opt {
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--ink-4);
+        margin-bottom: 20px;
+      }
+      .price .name {
+        font-family: var(--serif);
+        font-size: 28px;
+        line-height: 1.1;
+        color: var(--ink);
+        margin-bottom: 24px;
+      }
+      .price .fee {
+        font-family: var(--serif);
+        font-size: 64px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        color: var(--ink);
+        margin-bottom: 6px;
+      }
+      .price .fee .vat {
+        font-family: var(--sans);
+        font-size: 13px;
+        color: var(--ink-4);
+        letter-spacing: 0.04em;
+        margin-left: 6px;
+      }
+      .price .term {
+        font-size: 13px;
+        color: var(--ink-4);
+        margin-bottom: 32px;
+      }
+      .price ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+      }
+      .price li {
+        font-size: 14px;
+        color: var(--ink-3);
+        padding-left: 22px;
+        position: relative;
+        line-height: 1.5;
+      }
+      .price li::before {
+        content: "\2713";
+        position: absolute;
+        left: 0;
+        color: var(--green);
+        font-weight: 600;
+      }
+      @media (max-width: 880px) {
+        .price-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .pricing-foot {
+        margin-top: 48px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+      .pricing-foot .ff {
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+      }
+      .pricing-foot .ff .lbl {
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ink-4);
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+      .pricing-foot .ff p {
+        font-size: 13.5px;
+        line-height: 1.55;
+        color: var(--ink-3);
+      }
+      @media (max-width: 880px) {
+        .pricing-foot {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ========== PROOF STATS ========== */
+      .proof {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1.5px solid var(--ink);
+        border-bottom: 1.5px solid var(--ink);
+        margin-top: 96px;
+      }
+      .proof .cell {
+        padding: 48px 32px 40px 0;
+      }
+      .proof .cell + .cell {
+        border-left: 1px solid var(--line);
+        padding-left: 32px;
+      }
+      .proof .big {
+        font-family: var(--serif);
+        font-size: 72px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        color: var(--ink);
+      }
+      .proof .big.accent {
+        color: var(--accent);
+      }
+      .proof .cap {
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ink-4);
+        margin-top: 18px;
+        line-height: 1.55;
+      }
+      @media (max-width: 880px) {
+        .proof {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .proof .cell + .cell:nth-child(3) {
+          border-left: 0;
+          padding-left: 0;
+          border-top: 1px solid var(--line);
+          padding-top: 32px;
+        }
+      }
+
+      /* ========== TEAM (Section 07) ========== */
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 64px;
+      }
+      .team-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+      }
+      .team-card .photo {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .team-card .name {
+        font-family: var(--serif);
+        font-size: 32px;
+        line-height: 1.1;
+        color: var(--ink);
+      }
+      .team-card .role {
+        font-size: 13px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-top: 6px;
+      }
+      .team-card p {
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: var(--ink-3);
+      }
+      @media (max-width: 1100px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 680px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ========== STACK (Section 08) ========== */
+      .stack {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 64px;
+        border-top: 1px solid var(--line);
+      }
+      .stack .col {
+        padding: 40px 32px 40px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .stack .col + .col {
+        border-left: 1px solid var(--line);
+        padding-left: 32px;
+      }
+      .stack .col.warn {
+        background: #fafafa;
+      }
+      .stack .col .system {
+        font-family: var(--serif);
+        font-size: 24px;
+        line-height: 1.15;
+        color: var(--ink);
+      }
+      .stack .col .role {
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-top: 8px;
+        margin-bottom: 18px;
+      }
+      .stack .col.warn .role {
+        color: #d97706;
+      }
+      .stack .col p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--ink-3);
+      }
+      @media (max-width: 880px) {
+        .stack {
+          grid-template-columns: 1fr;
+        }
+        .stack .col + .col {
+          border-left: 0;
+          padding-left: 0;
+        }
+      }
+
+      /* ========== CTA (Section 09) ========== */
+      .cta {
+        text-align: left;
+        padding: 160px var(--pad);
+        background: #000;
+        color: #fff;
+      }
+      .cta-inner {
+        max-width: var(--max);
+        margin: 0 auto;
+      }
+      .cta h2 {
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: clamp(48px, 7vw, 112px);
+        line-height: 1.02;
+        letter-spacing: -0.02em;
+        margin-bottom: 32px;
+        max-width: 1100px;
+      }
+      .cta h2 .accent {
+        color: var(--accent);
+      }
+      .cta-sub {
+        font-family: var(--serif);
+        font-size: clamp(20px, 2.4vw, 30px);
+        line-height: 1.45;
+        color: rgba(255, 255, 255, 0.75);
+        max-width: 840px;
+        margin-bottom: 64px;
+      }
+      .cta-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        padding-top: 48px;
+        border-top: 1px solid var(--line-dim);
+      }
+      .cta-row .blk .lbl {
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 14px;
+      }
+      .cta-row .blk .val {
+        font-family: var(--serif);
+        font-size: 22px;
+        line-height: 1.35;
+        color: #fff;
+      }
+      .cta-row .blk .val a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        padding-bottom: 2px;
+      }
+      @media (max-width: 880px) {
+        .cta-row {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+      }
+
+      /* ========== FOOTER ========== */
+      footer.foot {
+        padding: 36px var(--pad);
+        background: #000;
+        color: rgba(255, 255, 255, 0.45);
+        border-top: 1px solid var(--line-dim);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      footer.foot a {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========== ACCESS GATE ========== -->
+    <div id="gate" aria-hidden="false">
+      <div class="gate-inner">
+        <div class="gate-brand">HILLWAY</div>
+        <div class="gate-h">Confidential.</div>
+        <p class="gate-p">
+          This proposal is prepared exclusively for Commercial Property
+          Rotherham. Please enter the access code provided alongside it.
+        </p>
+        <input
+          id="gate-pw"
+          type="password"
+          placeholder="Access code"
+          autocomplete="off"
+          autofocus
+        />
+        <button id="gate-go" type="button">Continue</button>
+        <div id="gate-err" role="alert"></div>
+        <div class="gate-foot">HPC/2026/CPR-001 · Hillway Holdings Limited</div>
+      </div>
+    </div>
+    <style>
+      #gate {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        color: #fff;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+      }
+      #gate.hidden {
+        display: none;
+      }
+      #gate .gate-inner {
+        max-width: 420px;
+        width: 90%;
+        padding: 48px 40px;
+        text-align: center;
+      }
+      #gate .gate-brand {
+        font-family: "Tenor Sans", serif;
+        font-size: 18px;
+        letter-spacing: 0.32em;
+        margin-bottom: 40px;
+        color: #fff;
+      }
+      #gate .gate-h {
+        font-family: "Tenor Sans", serif;
+        font-size: 40px;
+        line-height: 1.1;
+        margin-bottom: 16px;
+        letter-spacing: -0.01em;
+      }
+      #gate .gate-p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        line-height: 1.55;
+        margin-bottom: 32px;
+      }
+      #gate input {
+        width: 100%;
+        padding: 14px 18px;
+        background: #111;
+        border: 1px solid #333;
+        color: #fff;
+        border-radius: 8px;
+        font-size: 14px;
+        font-family: inherit;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      #gate input:focus {
+        border-color: #bd1622;
+      }
+      #gate button {
+        margin-top: 14px;
+        width: 100%;
+        padding: 14px 18px;
+        background: #bd1622;
+        color: #fff;
+        border: 0;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        letter-spacing: 0.04em;
+        transition: background 0.2s;
+      }
+      #gate button:hover {
+        background: #9a1119;
+      }
+      #gate #gate-err {
+        color: #ff5b6f;
+        margin-top: 16px;
+        font-size: 13px;
+        min-height: 20px;
+      }
+      #gate .gate-foot {
+        margin-top: 48px;
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+      }
+    </style>
+    <script>
+      (function () {
+        var EXPECTED =
+          "d9add80b938b532377747226626e6c2230ff0d328c467670d95e39491b4d215e";
+        var gate = document.getElementById("gate");
+        var pw = document.getElementById("gate-pw");
+        var go = document.getElementById("gate-go");
+        var err = document.getElementById("gate-err");
+        async function check() {
+          err.textContent = "";
+          var v = pw.value;
+          if (!v) {
+            err.textContent = "Please enter an access code.";
+            return;
+          }
+          var buf = await crypto.subtle.digest(
+            "SHA-256",
+            new TextEncoder().encode(v),
+          );
+          var hex = Array.from(new Uint8Array(buf))
+            .map(function (b) {
+              return b.toString(16).padStart(2, "0");
+            })
+            .join("");
+          if (hex === EXPECTED) {
+            try {
+              sessionStorage.setItem("cpr_unlocked", "1");
+            } catch (e) {}
+            gate.classList.add("hidden");
+            document.body.style.overflow = "";
+          } else {
+            err.textContent = "Incorrect access code.";
+            pw.value = "";
+            pw.focus();
+          }
+        }
+        go.addEventListener("click", check);
+        pw.addEventListener("keypress", function (e) {
+          if (e.key === "Enter") check();
+        });
+        try {
+          if (sessionStorage.getItem("cpr_unlocked") === "1") {
+            gate.classList.add("hidden");
+          } else {
+            document.body.style.overflow = "hidden";
+          }
+        } catch (e) {
+          document.body.style.overflow = "hidden";
+        }
+      })();
+    </script>
+
+    <!-- ========== TOP NAV ========== -->
+    <nav class="nav" id="nav">
+      <a href="#top" class="brandmark cobrand">
+        <span>HILLWAY</span>
+        <span class="brandcross">×</span>
+        <span class="cprmark">CPR</span>
+      </a>
+      <ul>
+        <li><a href="#opening">Opening</a></li>
+        <li><a href="#heard">What We Heard</a></li>
+        <li><a href="#how">How We Work</a></li>
+        <li><a href="#sample">Sample Output</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#invest">Investment</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+      <a href="#cta" class="cta">Next Steps</a>
+    </nav>
+    <style>
+      .nav .cobrand {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        font-family: var(--serif);
+        font-size: 18px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: #fff;
+      }
+      .nav .cobrand .brandcross {
+        font-family: var(--sans);
+        font-size: 14px;
+        letter-spacing: 0;
+        opacity: 0.5;
+      }
+      .nav .cobrand .cprmark {
+        color: var(--accent);
+        letter-spacing: 0.18em;
+      }
+    </style>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-eyebrow">
+          A Co-branded Proposal · Hillway × Commercial Property Rotherham
+        </div>
+        <h1>
+          Hillway<br /><span class="accent" style="font-style: italic">+</span>
+          CPR.<br />Embedded by August.
+        </h1>
+        <p class="hero-sub">
+          A three-month, one-day-a-week embedded engagement to lift the
+          workflows that consume Lisa&rsquo;s week — invoicing, cash-in,
+          compliance — onto Claude, while she&rsquo;s still in the room. The
+          result: hours back every time CPR takes on a new instruction, and a
+          quality lift in everything that goes out the door.
+        </p>
+      </div>
+      <div class="hero-meta">
+        <div class="cell">
+          <div class="lbl">Prepared for</div>
+          <div class="val">
+            Neil Keally MRICS<br />Commercial Property Rotherham
+          </div>
+        </div>
+        <div class="cell">
+          <div class="lbl">Date</div>
+          <div class="val">7 May 2026</div>
+        </div>
+        <div class="cell">
+          <div class="lbl">Reference</div>
+          <div class="val">HPC/2026/CPR-001</div>
+        </div>
+        <div class="cell">
+          <div class="lbl">Prepared by</div>
+          <div class="val">Matt Fitzgerald MRICS<br />Jamie Smyth MRICS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 01 OPENING ========== -->
+    <section class="bay" id="opening">
+      <div class="bay-inner">
+        <div class="bay-head reveal">
+          <div class="num">01</div>
+          <h2>
+            You asked us for the costs to
+            <span class="accent">get onboarded.</span> Here they are — alongside
+            what we&rsquo;d actually do, in what order, and why this is the
+            right window to move.
+          </h2>
+        </div>
+
+        <p class="bay-lead reveal">
+          We really enjoyed the conversation at your Rotherham office on
+          Wednesday 29 April with you, Lisa and Nikki. The demo ran through the
+          three things you said eat the most hours &mdash; invoicing, cash-in
+          reconciliation, compliance &mdash; and you saw what an embedded Claude
+          setup looks like once it&rsquo;s wired into a property business. This
+          proposal turns that conversation into a structured three-month
+          engagement. We are not selling software: Claude is widely available
+          and inexpensive at the seat level. What we sell is the implementation,
+          the property-specific frameworks we already run across our own
+          businesses, and a calm pair of hands during a moment of operational
+          change at CPR.
+        </p>
+
+        <div class="opening-grid reveal">
+          <div class="col">
+            <div class="lbl">The window</div>
+            <h3>
+              Lisa&rsquo;s notice expires
+              <span class="accent">end of June</span> if extended.
+            </h3>
+            <p>
+              The single most important sequencing decision in this proposal:
+              doing the work while Lisa is still in the room. Six weeks of
+              overlap means her invoicing and cash-in processes are captured,
+              automated and validated by the person who built them — not
+              reverse-engineered after she leaves.
+            </p>
+          </div>
+          <div class="col">
+            <div class="lbl">The team</div>
+            <h3>
+              Three people. <span class="accent">One under pressure.</span>
+            </h3>
+            <p>
+              Lisa is leaving. Nikki is covering the gap on evenings and
+              weekends and openly told us she is making errors. You are taking
+              on more instructions than the current setup can support without
+              breaking. This is the case for automation, not the case for
+              hiring.
+            </p>
+          </div>
+          <div class="col">
+            <div class="lbl">Where we&rsquo;ve been</div>
+            <h3>
+              Two prior evaluations.
+              <span class="accent"
+                >The conditions weren&rsquo;t right yet.</span
+              >
+            </h3>
+            <p>
+              You evaluated Re-Leased, and you reviewed the King Speed bespoke
+              build at &pound;20k. Neither went ahead — and that was the right
+              call at the time. With Lisa leaving, Nikki finding her feet and no
+              automation foundation underneath, neither would have been a good
+              investment yet. Build the foundation first &mdash; clean data,
+              automated workflows, trained staff &mdash; and platforms like
+              Re-Leased become a natural Phase 2 conversation rather than a leap
+              of faith.
+            </p>
+          </div>
+        </div>
+
+        <div class="pullquote reveal">
+          <q
+            >Please could you let me have the relevant costs to get
+            onboarded.</q
+          >
+          <cite>Neil Keally MRICS — 29 April 2026, 11:50am</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 02 WHAT WE HEARD ========== -->
+    <section class="bay dark" id="heard">
+      <div class="bay-inner">
+        <div class="bay-head reveal">
+          <div class="num">02</div>
+          <h2>
+            Six themes from the meeting where AI delivers
+            <span class="accent">measurable time savings</span> from week three
+            onwards.
+          </h2>
+        </div>
+
+        <div class="heard reveal">
+          <div class="item">
+            <div class="tag warn">Operational risk</div>
+            <h4>Lisa&rsquo;s departure.</h4>
+            <p>
+              Lisa has handed in her notice. With the right setup most of her
+              manual work is automated before she leaves — but the window is
+              tight. Capturing her processes while she is still on the team is
+              the priority of the first six weeks.
+            </p>
+          </div>
+          <div class="item">
+            <div class="tag">Phase 1 — Priority</div>
+            <h4>Invoicing.</h4>
+            <p>
+              A Word template edited each cycle, exported to PDF, attached to an
+              email, sent client by client. Across hundreds of invoices a
+              quarter, this is where most of Lisa&rsquo;s time goes. Step one is
+              migrating CPR onto cloud accounting (we&rsquo;d recommend Xero)
+              &mdash; once live, a connected Xero + Claude flow produces, checks
+              and dispatches the same invoices in minutes.
+            </p>
+          </div>
+          <div class="item">
+            <div class="tag">Phase 1 — Priority</div>
+            <h4>Cash-in reconciliation.</h4>
+            <p>
+              Money arrives, then has to be recorded against the transaction
+              record, the rent statement, and a separate Excel sheet per client.
+              Once Xero is live (Phase 1), bank-feed reconciliation pulls money
+              against open invoices automatically, with branded landlord
+              statements produced from the same data &mdash; the double-handling
+              goes away.
+            </p>
+          </div>
+          <div class="item">
+            <div class="tag">Phase 1 — Priority</div>
+            <h4>Compliance tracking.</h4>
+            <p>
+              EICR, gas, EPC and other certificates sit in emails and folders.
+              Claude reads every certificate, extracts the expiry, populates a
+              dashboard and adds calendar reminders at 90, 30 and 7 days — plus
+              chases suppliers for renewal.
+            </p>
+          </div>
+          <div class="item">
+            <div class="tag">Phase 2 — Candidate</div>
+            <h4>Lease, valuation &amp; marketing reports.</h4>
+            <p>
+              Lease abstracts, valuation reports, marketing brochures — still
+              produced largely by hand. With your data structured properly,
+              Claude pulls lease terms, comparables, VOA, EPC and planning data,
+              and produces branded first drafts. You keep the professional
+              judgement; the assembly disappears.
+            </p>
+          </div>
+          <div class="item">
+            <div class="tag">Phase 2 — Candidate</div>
+            <h4>Rightmove &amp; brochure workflow.</h4>
+            <p>
+              PowerPoint brochures and Rightmove uploads are a manual back-end
+              task. Browser automation populates listings from your data;
+              brochures are templated. Worth fixing the Burgess Commercial
+              legacy agent ID still showing on Rightmove as part of this.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 03 HOW WE WORK ========== -->
+    <section class="bay" id="how">
+      <div class="bay-inner">
+        <div class="bay-head reveal">
+          <div class="num">03</div>
+          <h2>
+            A three-month engagement, three phases,
+            <span class="accent">one consultant day per week.</span>
+          </h2>
+        </div>
+
+        <p class="bay-lead reveal">
+          Matt and Jamie share delivery between them, supported by the Hillway
+          tech team. On site or remote as suits. Weekly checkpoint with Neil,
+          weekly working session with Nikki. A shared Slack or Teams channel for
+          everything in between.
+        </p>
+
+        <div class="phases reveal">
+          <div class="phase">
+            <div class="num">01</div>
+            <div class="span">Weeks 1&ndash;2 · 19 May &rarr; 1 June</div>
+            <div class="name">Foundation &amp; Discovery</div>
+            <ul>
+              <li>
+                Claude Code installed for Neil, Nikki and Lisa for the handover
+                period
+              </li>
+              <li>
+                Migrate CPR onto cloud accounting (Xero recommended) &mdash;
+                chart of accounts, contacts, opening balances, bank feeds, VAT
+                setup
+              </li>
+              <li>
+                MCP servers connected to Xero, Microsoft 365, Rightmove
+                (browser), VOA, EPC register, Land Registry
+              </li>
+              <li>
+                CPR Wiki initialised — central context store across clients,
+                properties, suppliers, processes
+              </li>
+              <li>
+                Sit with Lisa to capture the invoicing and cash-in processes in
+                detail
+              </li>
+              <li>
+                Workflow inventory issued for sign-off before build starts
+              </li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="num">02</div>
+            <div class="span">Weeks 3&ndash;10 · 2 June &rarr; 27 July</div>
+            <div class="name">Priority Workflow Build</div>
+            <ul>
+              <li>
+                Invoicing engine — Xero-driven, one-click approval, tested with
+                Lisa
+              </li>
+              <li>
+                Cash-in reconciliation — bank feed in, branded statements out
+              </li>
+              <li>
+                Compliance tracker — dashboard, calendar reminders, chasing
+              </li>
+              <li>
+                Lease report engine — PDF in, structured cited abstract out
+              </li>
+              <li>
+                Meeting capture — transcripts and actions flow into the wiki
+                automatically
+              </li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="num">03</div>
+            <div class="span">Weeks 11&ndash;13 · 28 July &rarr; 17 August</div>
+            <div class="name">Training, Handover &amp; Roadmap</div>
+            <ul>
+              <li>
+                Hands-on training for Neil and Nikki — prompt patterns, voice,
+                mobile
+              </li>
+              <li>
+                Written SOPs for every automation built — survives future staff
+                changes
+              </li>
+              <li>
+                Phase 2 roadmap — valuation reports, brochures, Rightmove,
+                utility recharge
+              </li>
+              <li>
+                Final review with Neil — what is live, what is outstanding,
+                whether to continue under Evolve
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 04 WORKFLOWS ========== -->
+    <section class="bay cream" id="workflows">
+      <div class="bay-inner">
+        <div class="bay-head reveal">
+          <div class="num">04</div>
+          <h2>
+            Five workflows, <span class="accent">live by mid-August.</span>
+          </h2>
+        </div>
+
+        <p class="bay-lead reveal">
+          The deliverables that come out of the three-month engagement. Every
+          one tested in your environment, against your data, by the people who
+          will use it day-to-day.
+        </p>
+
+        <div class="flows reveal">
+          <div class="flow">
+            <div class="n">01</div>
+            <div>
+              <div class="title">Invoicing engine.</div>
+              <span class="pill priority">Phase 1 · Priority</span>
+            </div>
+            <div class="desc">
+              Rent and service charge invoicing automated end-to-end through
+              Xero. Claude generates the invoices, drafts the covering emails,
+              attaches the PDFs and queues them for one-click approval. Tested
+              and signed off with Lisa before she leaves.
+            </div>
+          </div>
+          <div class="flow">
+            <div class="n">02</div>
+            <div>
+              <div class="title">Cash-in reconciliation.</div>
+              <span class="pill priority">Phase 1 · Priority</span>
+            </div>
+            <div class="desc">
+              Bank feed into Xero, automated allocation against open invoices,
+              branded landlord rent statements produced for each client. A daily
+              exception list flags anything that needs human judgement.
+            </div>
+          </div>
+          <div class="flow">
+            <div class="n">03</div>
+            <div>
+              <div class="title">Compliance tracker.</div>
+              <span class="pill priority">Phase 1 · Priority</span>
+            </div>
+            <div class="desc">
+              Every EICR, gas, EPC and compliance certificate extracted from
+              email and drive, expiry dates populated to a single dashboard,
+              calendar reminders at 90, 30 and 7 days, and automated chasing
+              emails to suppliers.
+            </div>
+          </div>
+          <div class="flow">
+            <div class="n">04</div>
+            <div>
+              <div class="title">Lease report engine.</div>
+              <span class="pill">Phase 1</span>
+            </div>
+            <div class="desc">
+              Drop in any commercial lease PDF, receive a structured RICS-grade
+              abstract within minutes — rent, term, breaks, repair, alienation,
+              user, service charge — every clause cited back to the source
+              document for verification.
+            </div>
+          </div>
+          <div class="flow">
+            <div class="n">05</div>
+            <div>
+              <div class="title">Meeting capture &amp; CPR Wiki.</div>
+              <span class="pill">Phase 1</span>
+            </div>
+            <div class="desc">
+              Meetings and calls transcribed and indexed into a central
+              knowledge base. Action points become follow-up reminders. Neil
+              walks back into the office knowing exactly what was said, agreed
+              and outstanding from every conversation he&rsquo;s had that week.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 04b SAMPLE OUTPUT ========== -->
+    <section class="bay" id="sample" style="background: #fafafa">
+      <div class="bay-inner">
+        <div class="bay-head reveal">
+          <div class="num">04b</div>
+          <h2>
+            What this looks like
+            <span class="accent">on CPR letterhead.</span>
+          </h2>
+        </div>
+
+        <p class="bay-lead reveal">
+          Three artefacts from the Phase 2 build, each generated automatically
+          from the data we&rsquo;ll have indexed during Phase 1. We will produce
+          live drafts of all three by week 4, branded for CPR, using your own
+          property data. You then sign-off the templates and they run on
+          autopilot.
+        </p>
+
+        <div
+          class="reveal"
+          style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+          "
+        >
+          <div
+            style="
+              background: #fff;
+              border: 1px solid var(--line);
+              border-radius: 16px;
+              padding: 36px 32px;
+              border-top: 4px solid var(--accent);
+            "
+          >
+            <div
+              style="
+                font-size: 11px;
+                letter-spacing: 0.28em;
+                text-transform: uppercase;
+                color: var(--accent);
+                margin-bottom: 14px;
+              "
+            >
+              Sample 01
+            </div>
+            <h3
+              style="
+                font-family: var(--serif);
+                font-size: 26px;
+                line-height: 1.15;
+                margin-bottom: 14px;
+                color: var(--ink);
+              "
+            >
+              Property brochure.
+            </h3>
+            <p
+              style="
+                font-size: 14px;
+                line-height: 1.6;
+                color: var(--ink-3);
+                margin-bottom: 18px;
+              "
+            >
+              Your particulars rebuilt through the system. Drop a postcode,
+              property type and asking rent in &mdash; receive a CPR-branded
+              brochure with photos, OSM map, schedule of areas, EPC, rates data
+              and full description, ready to send. Generated in roughly two
+              minutes once the property record is in the wiki.
+            </p>
+            <div
+              style="
+                font-size: 12px;
+                color: var(--ink-4);
+                padding-top: 16px;
+                border-top: 1px solid var(--line);
+              "
+            >
+              Worked example: <strong>Stuart House, Moorgate</strong>
+              &mdash; Grade A office, 7,500 sq ft.
+            </div>
+          </div>
+
+          <div
+            style="
+              background: #fff;
+              border: 1px solid var(--line);
+              border-radius: 16px;
+              padding: 36px 32px;
+              border-top: 4px solid var(--accent);
+            "
+          >
+            <div
+              style="
+                font-size: 11px;
+                letter-spacing: 0.28em;
+                text-transform: uppercase;
+                color: var(--accent);
+                margin-bottom: 14px;
+              "
+            >
+              Sample 02
+            </div>
+            <h3
+              style="
+                font-family: var(--serif);
+                font-size: 26px;
+                line-height: 1.15;
+                margin-bottom: 14px;
+                color: var(--ink);
+              "
+            >
+              Rotherham market report.
+            </h3>
+            <p
+              style="
+                font-size: 14px;
+                line-height: 1.6;
+                color: var(--ink-3);
+                margin-bottom: 18px;
+              "
+            >
+              Knight Frank-grade structure, real figures pulled from the
+              comparable database, takeaways CPR can stand behind. Issued
+              quarterly to retained clients and prospects, useful for valuation
+              work and rent review submissions. Generated in roughly ten minutes
+              per quarter once the data pool is wired.
+            </p>
+            <div
+              style="
+                font-size: 12px;
+                color: var(--ink-4);
+                padding-top: 16px;
+                border-top: 1px solid var(--line);
+              "
+            >
+              Worked example:
+              <strong>Rotherham Office &amp; Industrial · Q3 2026</strong>.
+            </div>
+          </div>
+
+          <div
+            style="
+              background: #fff;
+              border: 1px solid var(--line);
+              border-radius: 16px;
+              padding: 36px 32px;
+              border-top: 4px solid var(--accent);
+            "
+          >
+            <div
+              style="
+                font-size: 11px;
+                letter-spacing: 0.28em;
+                text-transform: uppercase;
+                color: var(--accent);
+                margin-bottom: 14px;
+              "
+            >
+              Sample 03
+            </div>
+            <h3
+              style="
+                font-family: var(--serif);
+                font-size: 26px;
+                line-height: 1.15;
+                margin-bottom: 14px;
+                color: var(--ink);
+              "
+            >
+              Lease abstract.
+            </h3>
+            <p
+              style="
+                font-size: 14px;
+                line-height: 1.6;
+                color: var(--ink-3);
+                margin-bottom: 18px;
+              "
+            >
+              Drop in a commercial lease PDF; receive a structured RICS-grade
+              abstract within minutes &mdash; rent, term, breaks, repair,
+              alienation, user, service charge &mdash; with every clause cited
+              back to the source document. Replaces the half-day Neil currently
+              loses to each one.
+            </p>
+            <div
+              style="
+                font-size: 12px;
+                color: var(--ink-4);
+                padding-top: 16px;
+                border-top: 1px solid var(--line);
+              "
+            >
+              Worked example:
+              <strong>15 High Street, Rotherham</strong> &mdash; redacted
+              tenant, single page out.
+            </div>
+          </div>
+        </div>
+
+        <p
+          class="reveal"
+          style="
+            margin-top: 32px;
+            font-size: 13px;
+            color: var(--ink-4);
+            font-style: italic;
+          "
+        >
+          Live versions of all three will be branded with the CPR mark and
+          colour palette pulled from your existing brochures and website.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== 05 TIMELINE ========== -->
+    <section class="bay dark" id="timeline">
+      <div class="bay-inner">
+        <div class="bay-head reveal">
+          <div class="num">05</div>
+          <h2>
+            Indicative timeline.
+            <span class="accent">19 May &rarr; 17 August.</span>
+          </h2>
+        </div>
+
+        <p class="bay-lead reveal">
+          Assuming instruction by 16 May 2026. Each milestone builds on the
+          last; nothing is delivered cold. Lisa&rsquo;s departure at the end of
+          June is a fixed point in the schedule — every Phase 1 priority
+          workflow is live and validated before that date.
+        </p>
+
+        <div class="tline reveal">
+          <div class="tline-rail">
+            <div class="tline-bar"></div>
+            <div class="tline-marks">
+              <div class="tline-mark">
+                <div class="week">Weeks 1&ndash;2</div>
+                <div class="when">19 May &rarr; 1 June</div>
+                <p>
+                  Discovery and setup. Claude installed across the team. MCPs
+                  connected. Lisa walks us through her processes. Workflow
+                  inventory signed off.
+                </p>
+              </div>
+              <div class="tline-mark">
+                <div class="week">Weeks 3&ndash;6</div>
+                <div class="when">2 &rarr; 29 June</div>
+                <p>
+                  Invoicing and cash-in built and tested alongside Lisa. By the
+                  time she leaves, the workflows that consume most of her week
+                  are running automatically and Nikki has been trained on them.
+                </p>
+              </div>
+              <div class="tline-mark">
+                <div class="week">Weeks 7&ndash;10</div>
+                <div class="when">30 June &rarr; 27 July</div>
+                <p>
+                  Compliance tracker live. Lease report engine built. Meeting
+                  capture flowing into the CPR Wiki. Phase 2 candidates scoped
+                  with Neil.
+                </p>
+              </div>
+              <div class="tline-mark">
+                <div class="week">Weeks 11&ndash;13</div>
+                <div class="when">28 July &rarr; 17 August</div>
+                <p>
+                  Training. SOPs. Handover. Phase 2 roadmap. Decision point:
+                  continue under Evolve, or run independently.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tline-callout">
+            <div class="lbl">Critical recommendation</div>
+            <p>
+              Ask Lisa to extend her notice to the end of June. It costs CPR one
+              extra month of salary and gives us six weeks of overlap to
+              capture, automate and validate her work with her in the room.
+              Without it, those workflows transfer cold to Nikki at the worst
+              possible moment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 06 INVESTMENT ========== -->
+    <section class="bay" id="invest">
+      <div class="bay-inner">
+        <div class="bay-head reveal">
+          <div class="num">06</div>
+          <h2>
+            Three options.
+            <span class="accent">All start with the same Embed.</span>
+          </h2>
+        </div>
+
+        <p class="bay-lead reveal">
+          The blended day rate held across all three options is &pound;625 +
+          VAT, against our standard rate of &pound;950 + VAT. Mates rates,
+          delivered between Matt, Jamie and Alex.
+        </p>
+
+        <div class="price-grid reveal">
+          <div class="price">
+            <div class="opt">Option A</div>
+            <div class="name">Embed Only.</div>
+            <div class="fee">&pound;8,125<span class="vat">+ VAT</span></div>
+            <div class="term">3 months · fixed · one day per week</div>
+            <ul>
+              <li>Foundation &amp; Discovery (Wks 1&ndash;2)</li>
+              <li>Priority Workflow Build (Wks 3&ndash;10)</li>
+              <li>Training, Handover, Roadmap (Wks 11&ndash;13)</li>
+              <li>Invoicing engine</li>
+              <li>Cash-in reconciliation</li>
+              <li>Compliance tracker</li>
+              <li>Lease report engine</li>
+              <li>CPR Wiki + workflow inventory</li>
+              <li>SOPs for every automation</li>
+              <li>No ongoing commitment</li>
+            </ul>
+          </div>
+          <div class="price featured">
+            <div class="opt">Option B · Best Value</div>
+            <div class="name">Embed + 6-month Evolve.</div>
+            <div class="fee">&pound;15,000<span class="vat">+ VAT</span></div>
+            <div class="term">
+              9 months · fixed · saves &pound;2,125 vs rolling
+            </div>
+            <ul>
+              <li>Everything in Option A</li>
+              <li>Six months of Evolve retainer</li>
+              <li>Up to two days per month, Matt &amp; Jamie</li>
+              <li>Async Slack &amp; email support</li>
+              <li>New automations as they surface</li>
+              <li>Quarterly review &amp; roadmap reset</li>
+              <li>Locked-in pricing for nine months</li>
+              <li>No 30-day churn risk</li>
+            </ul>
+          </div>
+          <div class="price">
+            <div class="opt">Option C</div>
+            <div class="name">Embed + Rolling Evolve.</div>
+            <div class="fee">&pound;8,125<span class="vat">+ VAT</span></div>
+            <div class="term">Setup, then &pound;1,500/mo from month 4</div>
+            <ul>
+              <li>Everything in Option A</li>
+              <li>Rolling Evolve from month 4</li>
+              <li>&pound;1,500 + VAT per month</li>
+              <li>Up to two days per month</li>
+              <li>Async Slack &amp; email support</li>
+              <li>30 days&rsquo; notice on either side</li>
+              <li>No minimum term</li>
+              <li>Maximum flexibility</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pricing-foot reveal">
+          <div class="ff">
+            <div class="lbl">What CPR pays separately</div>
+            <p>
+              Claude seats c.&pound;18&ndash;100 per user per month depending on
+              usage. Meeting recording (Circle Back or equivalent) c.&pound;20
+              per user per month. Any new MCP or API subscriptions, typically
+              negligible. We will recommend the right tier per user during Phase
+              1.
+            </p>
+          </div>
+          <div class="ff">
+            <div class="lbl">Day rate disclosure</div>
+            <p>
+              Standard Hillway day rate is &pound;950 + VAT. Pricing above
+              reflects a blended mates-rates rate of &pound;625 + VAT per day,
+              held for the full Embed and any subsequent Evolve work. Delivery
+              is split between Matt, Jamie and Alex, with Alex picking up a
+              portion of the day-to-day implementation.
+            </p>
+          </div>
+          <div class="ff">
+            <div class="lbl">Payment terms</div>
+            <p>
+              Embed fee invoiced 50% on instruction, 50% at end of month two.
+              Evolve invoiced monthly in advance. All prices exclusive of VAT at
+              the prevailing rate. No fee due before instruction.
+            </p>
+          </div>
+        </div>
+
+        <div class="proof reveal">
+          <div class="cell">
+            <div class="big accent">3</div>
+            <div class="cap">Months · Embed Engagement</div>
+          </div>
+          <div class="cell">
+            <div class="big">5+</div>
+            <div class="cap">Workflows live by week 13</div>
+          </div>
+          <div class="cell">
+            <div class="big accent">1</div>
+            <div class="cap">Day per week, Matt &amp; Jamie</div>
+          </div>
+          <div class="cell">
+            <div class="big">30d</div>
+            <div class="cap">Notice on Evolve, either side</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 07 TEAM ========== -->
+    <section class="bay cream" id="team">
+      <div class="bay-inner">
+        <div class="bay-head reveal">
+          <div class="num">07</div>
+          <h2>
+            Your team. <span class="accent">Three Hillway people,</span> with
+            the wider tech bench behind them.
+          </h2>
+        </div>
+
+        <p class="bay-lead reveal">
+          You will have direct access to all three. Weekly working sessions in
+          your diary, a shared messaging channel for everything in between, and
+          one phone number that always answers.
+        </p>
+
+        <div class="team-grid reveal">
+          <div class="team-card">
+            <img src="jamie.jpg" alt="Jamie Smyth MRICS" class="photo" />
+            <div>
+              <div class="name">Jamie Smyth MRICS</div>
+              <div class="role">Director · Engagement Lead</div>
+            </div>
+            <p>
+              Jamie owns the engagement and is your primary point of contact
+              through the three months. MRICS-qualified, with 15+ years across
+              commercial property in South Yorkshire, he runs Livin Residential
+              Lettings and Jock&rsquo;s Garage alongside Hillway and oversees
+              the RICS-compliant aspects of the work plus the day-to-day
+              relationship with you, Nikki and Lisa.
+            </p>
+          </div>
+          <div class="team-card">
+            <img src="matt.jpg" alt="Matt Fitzgerald MRICS" class="photo" />
+            <div>
+              <div class="name">Matt Fitzgerald MRICS</div>
+              <div class="role">
+                Managing Director · AI &amp; Integrations Lead
+              </div>
+            </div>
+            <p>
+              Matt founded Hillway in 2024 after 15 years at CPP Property. He
+              has been working with Claude in production since early 2025 and
+              now runs every Hillway client engagement through it. He owns the
+              AI architecture for CPR — Xero connection, MCP setup, automation
+              pipelines, and the CPR Wiki.
+            </p>
+          </div>
+          <div class="team-card">
+            <img src="alex.jpg" alt="Alex Brazier" class="photo" />
+            <div>
+              <div class="name">Alex Brazier</div>
+              <div class="role">
+                Service Charge &amp; PM · Implementation Support
+              </div>
+            </div>
+            <p>
+              Alex supports delivery with a property management lens, ensuring
+              the automations match how a small commercial agency actually runs
+              day-to-day. He works closely with Nikki on the workflows that
+              touch service charge, invoicing and tenant statements, and picks
+              up a portion of the day-to-day build alongside Matt and Jamie.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 08 STACK ========== -->
+    <section class="bay" id="stack">
+      <div class="bay-inner">
+        <div class="bay-head reveal">
+          <div class="num">08</div>
+          <h2>
+            How we work with <span class="accent">your existing stack.</span>
+          </h2>
+        </div>
+
+        <p class="bay-lead reveal">
+          We will not push you onto a new property management platform.
+          Re-Leased and the King Speed proposal are not the answer here — the
+          answer is automation around the tools you already trust.
+        </p>
+
+        <div class="stack reveal">
+          <div class="col">
+            <div class="system">Xero</div>
+            <div class="role">Accounting · Phase 1 migration</div>
+            <p>
+              You&rsquo;re not on a connected accounting platform yet &mdash;
+              Lisa runs invoicing from Word and Excel today. Phase 1 includes
+              the migration to Xero (or Sage if you prefer). Once live, Claude
+              raises invoices, allocates receipts, runs year-end checks and
+              produces reports without anyone logging in.
+            </p>
+          </div>
+          <div class="col">
+            <div class="system">Microsoft 365</div>
+            <div class="role">Email · Drive · Calendar</div>
+            <p>
+              Claude reads your inbox, your OneDrive and your calendar directly.
+              No re-uploading documents. No copying data between systems. Drafts
+              back into Outlook ready to send.
+            </p>
+          </div>
+          <div class="col">
+            <div class="system">Rightmove &amp; Website</div>
+            <div class="role">Listings · Brochures</div>
+            <p>
+              Until a Rightmove MCP lands, browser automation populates the
+              back-end from structured property data. Brochures produced in
+              seconds from a single prompt. Burgess legacy agent ID resolved.
+            </p>
+          </div>
+          <div class="col warn">
+            <div class="system">Re-Leased &mdash; open conversation.</div>
+            <div class="role">Phase 2 candidate</div>
+            <p>
+              Not in scope for this engagement, but firmly on the table for
+              later. Once invoicing, cash-in and compliance are automated and
+              your data is clean, Re-Leased may well be the right step &mdash;
+              particularly if you bring in a dedicated property manager.
+              We&rsquo;ll bring it back into the conversation as part of Phase
+              2.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 08b RICS AI COMPLIANCE ========== -->
+    <section class="bay cream" id="rics">
+      <div class="bay-inner">
+        <div class="bay-head reveal">
+          <div class="num">08b</div>
+          <h2>
+            RICS AI Practice Statement.
+            <span class="accent">Compliant from day one.</span>
+          </h2>
+        </div>
+
+        <p class="bay-lead reveal">
+          The RICS AI Practice Statement came into force in March 2026. Any
+          regulated firm using AI in client work needs a written policy, terms
+          of business disclosures and a documented data governance position
+          before AI output goes anywhere near a client. This is a real
+          requirement, not optional.
+        </p>
+
+        <div
+          class="reveal"
+          style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--line);
+          "
+        >
+          <div>
+            <div
+              style="
+                font-size: 11px;
+                letter-spacing: 0.28em;
+                text-transform: uppercase;
+                color: var(--accent);
+                margin-bottom: 12px;
+              "
+            >
+              We handle
+            </div>
+            <h4
+              style="
+                font-family: var(--serif);
+                font-size: 22px;
+                line-height: 1.2;
+                margin-bottom: 10px;
+                color: var(--ink);
+              "
+            >
+              CPR AI policy.
+            </h4>
+            <p style="font-size: 14px; line-height: 1.6; color: var(--ink-3)">
+              Drafted, board-signed, filed in the CPR Wiki. Sets out which tools
+              you use, where data is processed, and the human-in-the- loop
+              checkpoints.
+            </p>
+          </div>
+          <div>
+            <div
+              style="
+                font-size: 11px;
+                letter-spacing: 0.28em;
+                text-transform: uppercase;
+                color: var(--accent);
+                margin-bottom: 12px;
+              "
+            >
+              We handle
+            </div>
+            <h4
+              style="
+                font-family: var(--serif);
+                font-size: 22px;
+                line-height: 1.2;
+                margin-bottom: 10px;
+                color: var(--ink);
+              "
+            >
+              ToB &amp; client disclosure.
+            </h4>
+            <p style="font-size: 14px; line-height: 1.6; color: var(--ink-3)">
+              Standard wording added to your terms of business and client
+              engagement letters disclosing AI use, data handling, and the
+              opt-out mechanism. Legal-reviewed template.
+            </p>
+          </div>
+          <div>
+            <div
+              style="
+                font-size: 11px;
+                letter-spacing: 0.28em;
+                text-transform: uppercase;
+                color: var(--accent);
+                margin-bottom: 12px;
+              "
+            >
+              We handle
+            </div>
+            <h4
+              style="
+                font-family: var(--serif);
+                font-size: 22px;
+                line-height: 1.2;
+                margin-bottom: 10px;
+                color: var(--ink);
+              "
+            >
+              Data governance position.
+            </h4>
+            <p style="font-size: 14px; line-height: 1.6; color: var(--ink-3)">
+              GDPR-compliant register of AI-touched data flows, sub-processor
+              list, retention schedule. Ready for an RICS regulatory visit from
+              week 6.
+            </p>
+          </div>
+        </div>
+
+        <p
+          class="reveal"
+          style="
+            margin-top: 40px;
+            padding: 24px 28px;
+            background: #fff;
+            border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            font-family: var(--serif);
+            font-size: 18px;
+            line-height: 1.5;
+            color: var(--ink-2);
+          "
+        >
+          Whichever option CPR picks, the compliance setup is included in the
+          Embed fee. You will not be paying extra for the AI policy or the ToB
+          rewrite, and you will not be exposed at your next RICS monitoring
+          visit.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== 09 CTA ========== -->
+    <section class="cta" id="cta">
+      <div class="cta-inner">
+        <div class="hero-eyebrow reveal">Section 09 · Next steps</div>
+        <h2 class="reveal">
+          One conversation,<br />
+          <span class="accent">one decision,</span> three months.
+        </h2>
+        <p class="cta-sub reveal">
+          We really enjoyed the conversation at your Rotherham office on 29
+          April with you, Lisa and Nikki. If the scope feels right, confirm
+          which option you&rsquo;d like to take and we&rsquo;ll issue an
+          engagement letter within 48 hours and book a half-day kick-off at your
+          office the following week. To make the most of the Lisa overlap,
+          instruction by <strong>16 May 2026</strong> is the play. Anything
+          you&rsquo;d like to discuss before then — scope, sequencing, pricing,
+          the wider Hillway × CPR opportunity — pick up the phone.
+        </p>
+
+        <div class="cta-row reveal">
+          <div class="blk">
+            <div class="lbl">Matt Fitzgerald MRICS</div>
+            <div class="val">
+              Managing Director<br /><a href="mailto:matt@hillwayco.uk"
+                >matt@hillwayco.uk</a
+              >
+            </div>
+          </div>
+          <div class="blk">
+            <div class="lbl">Jamie Smyth MRICS</div>
+            <div class="val">
+              Director<br /><a href="mailto:jamie@hillwayco.uk"
+                >jamie@hillwayco.uk</a
+              >
+            </div>
+          </div>
+          <div class="blk">
+            <div class="lbl">Hillway Holdings Limited</div>
+            <div class="val">
+              Steel City House, Sheffield S1 2GQ<br />JS Business Centre,
+              Doncaster DN4 5AB
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>Hillway Holdings Limited · RICS Regulated · Reg. 900798</span>
+      <span>HILLWAY × CPR · HPC/2026/CPR-001 · Confidential</span>
+      <span>Commercial Property. Evolved.</span>
+    </footer>
+
+    <script>
+      // Sticky-nav background
+      const nav = document.getElementById("nav");
+      const onScroll = () => {
+        if (window.scrollY > 80) nav.classList.add("scrolled");
+        else nav.classList.remove("scrolled");
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      // Reveal-on-scroll
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          }
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>
