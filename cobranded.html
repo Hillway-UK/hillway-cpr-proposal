@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="AI Embed & Workflow Automation proposal prepared for Commercial Property Rotherham by Hillway. Onboarded May. Operational August."
+      content="Fee proposal for the AI Embed engagement, prepared by Hillway for Commercial Property Rotherham. Instructed May. Operational August."
     />
     <meta name="robots" content="noindex, nofollow" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1036,6 +1036,101 @@
       footer.foot a {
         color: rgba(255, 255, 255, 0.7);
       }
+
+      /* ========== PRINT (A4 PDF) ========== */
+      @media print {
+        @page {
+          size: A4;
+          margin: 14mm 12mm 16mm 12mm;
+        }
+        :root {
+          --pad: 14mm;
+        }
+        html,
+        body {
+          background: #fff !important;
+          color: #1a1a1a !important;
+          font-family:
+            "Calibri", "Carlito", "Helvetica Neue", Arial, sans-serif !important;
+          font-size: 10.5pt !important;
+          line-height: 1.5 !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        .nav,
+        #gate {
+          display: none !important;
+        }
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+        section.bay {
+          padding: 18mm 0 !important;
+          page-break-inside: avoid;
+        }
+        section.bay.dark {
+          background: #000 !important;
+          color: #fff !important;
+        }
+        section.bay.cream {
+          background: #f5f5f5 !important;
+        }
+        .hero {
+          min-height: auto !important;
+          padding: 24mm 0 18mm !important;
+          page-break-after: always;
+        }
+        .hero h1 {
+          font-size: 32pt !important;
+          line-height: 1.05 !important;
+        }
+        .hero-sub {
+          font-size: 13pt !important;
+        }
+        .bay-head h2 {
+          font-size: 22pt !important;
+          line-height: 1.15 !important;
+        }
+        .bay-head .num {
+          font-size: 28pt !important;
+        }
+        .bay-lead,
+        p {
+          font-size: 10.5pt !important;
+          line-height: 1.5 !important;
+        }
+        h3,
+        h4 {
+          font-family:
+            "Calibri", "Carlito", "Helvetica Neue", Arial, sans-serif !important;
+        }
+        .opening-grid,
+        .heard,
+        .phases,
+        .flows,
+        .price-grid,
+        .stack,
+        .team-grid {
+          page-break-inside: avoid;
+        }
+        .price.featured {
+          break-inside: avoid;
+        }
+        section.cta {
+          page-break-before: always;
+        }
+        a[href]::after {
+          content: "" !important;
+        }
+        img {
+          max-width: 100% !important;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1191,14 +1286,16 @@
         pw.addEventListener("keypress", function (e) {
           if (e.key === "Enter") check();
         });
+        var bypassPrint = location.search.indexOf("print=1") !== -1;
         try {
-          if (localStorage.getItem("cpr_unlocked") === "1") {
+          if (bypassPrint || localStorage.getItem("cpr_unlocked") === "1") {
             gate.classList.add("hidden");
           } else {
             document.body.style.overflow = "hidden";
           }
         } catch (e) {
-          document.body.style.overflow = "hidden";
+          if (!bypassPrint) document.body.style.overflow = "hidden";
+          else gate.classList.add("hidden");
         }
       })();
     </script>
@@ -1302,13 +1399,13 @@
           Wednesday 29 April with you, Lisa and Nikki. The demo ran through the
           three things you said eat the most hours &mdash; invoicing, cash-in
           reconciliation, compliance &mdash; and you saw what an embedded Claude
-          setup looks like once it&rsquo;s wired into a property business. This
-          proposal turns that conversation into a structured three-month
-          engagement. We are not selling software: Claude is widely available
-          and inexpensive at the seat level. What we sell is the implementation,
-          the property-specific frameworks we already run across our own
-          businesses, and a calm pair of hands during a moment of operational
-          change at CPR.
+          setup looks like once it&rsquo;s wired into a property consultancy.
+          This fee proposal turns that conversation into a structured
+          three-month engagement. Hillway is not a software vendor: Claude is
+          widely available and inexpensive at the seat level. Our instruction
+          covers the implementation, the property-specific frameworks we run
+          across our own consultancy and the wider portfolio, and a calm pair of
+          hands during a moment of operational change at CPR.
         </p>
 
         <div class="opening-grid reveal">
@@ -1349,11 +1446,11 @@
             </h3>
             <p>
               You evaluated Re-Leased, and you reviewed the King Speed bespoke
-              build at &pound;20k. Neither went ahead — and that was the right
-              call at the time. With Lisa leaving, Nikki finding her feet and no
-              automation foundation underneath, neither would have been a good
-              investment yet. Build the foundation first &mdash; clean data,
-              automated workflows, trained staff &mdash; and platforms like
+              commission at &pound;20k. Neither went ahead — and that was the
+              right call at the time. With Lisa leaving, Nikki finding her feet
+              and no automation foundation underneath, neither would have been a
+              good investment yet. Lay the foundation first &mdash; clean data,
+              automated workflows, trained staff &mdash; and systems like
               Re-Leased become a natural Phase 2 conversation rather than a leap
               of faith.
             </p>
@@ -1423,8 +1520,8 @@
             <p>
               EICR, gas, EPC and other certificates sit in emails and folders.
               Claude reads every certificate, extracts the expiry, populates a
-              dashboard and adds calendar reminders at 90, 30 and 7 days — plus
-              chases suppliers for renewal.
+              central register and adds calendar reminders at 90, 30 and 7 days
+              — plus chases suppliers for renewal.
             </p>
           </div>
           <div class="item">
@@ -1464,8 +1561,8 @@
         </div>
 
         <p class="bay-lead reveal">
-          Matt and Jamie share delivery between them, supported by the Hillway
-          tech team. On site or remote as suits. Weekly checkpoint with Neil,
+          Matt and Jamie share delivery between them, supported by the wider
+          Hillway team. On site or remote as suits. Weekly checkpoint with Neil,
           weekly working session with Nikki. A shared Slack or Teams channel for
           everything in between.
         </p>
@@ -1486,8 +1583,8 @@
                 setup
               </li>
               <li>
-                MCP servers connected to Xero, Microsoft 365, Rightmove
-                (browser), VOA, EPC register, Land Registry
+                Data connections established to Xero, Microsoft 365, Rightmove
+                (via browser), VOA, EPC register and Land Registry
               </li>
               <li>
                 CPR Wiki initialised — central context store across clients,
@@ -1498,27 +1595,29 @@
                 detail
               </li>
               <li>
-                Workflow inventory issued for sign-off before build starts
+                Workflow inventory issued for sign-off before delivery commences
               </li>
             </ul>
           </div>
           <div class="phase">
             <div class="num">02</div>
             <div class="span">Weeks 3&ndash;10 · 2 June &rarr; 27 July</div>
-            <div class="name">Priority Workflow Build</div>
+            <div class="name">Priority Workflow Delivery</div>
             <ul>
               <li>
-                Invoicing engine — Xero-driven, one-click approval, tested with
+                Invoicing service — Xero-driven, one-click approval, tested with
                 Lisa
               </li>
               <li>
                 Cash-in reconciliation — bank feed in, branded statements out
               </li>
               <li>
-                Compliance tracker — dashboard, calendar reminders, chasing
+                Compliance register — central record, calendar reminders,
+                supplier chases
               </li>
               <li>
-                Lease report engine — PDF in, structured cited abstract out
+                Lease abstracting service — PDF in, structured cited abstract
+                out
               </li>
               <li>
                 Meeting capture — transcripts and actions flow into the wiki
@@ -1573,7 +1672,7 @@
           <div class="flow">
             <div class="n">01</div>
             <div>
-              <div class="title">Invoicing engine.</div>
+              <div class="title">Automated invoicing.</div>
               <span class="pill priority">Phase 1 · Priority</span>
             </div>
             <div class="desc">
@@ -1598,12 +1697,12 @@
           <div class="flow">
             <div class="n">03</div>
             <div>
-              <div class="title">Compliance tracker.</div>
+              <div class="title">Compliance register.</div>
               <span class="pill priority">Phase 1 · Priority</span>
             </div>
             <div class="desc">
               Every EICR, gas, EPC and compliance certificate extracted from
-              email and drive, expiry dates populated to a single dashboard,
+              email and drive, expiry dates populated into a single register,
               calendar reminders at 90, 30 and 7 days, and automated chasing
               emails to suppliers.
             </div>
@@ -1611,7 +1710,7 @@
           <div class="flow">
             <div class="n">04</div>
             <div>
-              <div class="title">Lease report engine.</div>
+              <div class="title">Lease abstracting.</div>
               <span class="pill">Phase 1</span>
             </div>
             <div class="desc">
@@ -1650,11 +1749,11 @@
         </div>
 
         <p class="bay-lead reveal">
-          Three artefacts from the Phase 2 build, each generated automatically
-          from the data we&rsquo;ll have indexed during Phase 1. We will produce
-          live drafts of all three by week 4, branded for CPR, using your own
-          property data. You then sign-off the templates and they run on
-          autopilot.
+          Three sample deliverables produced under the engagement, each
+          generated automatically from the data indexed during Phase 1. We will
+          produce live drafts of all three by week 4, branded for CPR, using
+          your own property data. You then sign off the templates and they run
+          automatically thereafter.
         </p>
 
         <div
@@ -1938,9 +2037,9 @@
                 <div class="week">Weeks 1&ndash;2</div>
                 <div class="when">19 May &rarr; 1 June</div>
                 <p>
-                  Discovery and setup. Claude installed across the team. MCPs
-                  connected. Lisa walks us through her processes. Workflow
-                  inventory signed off.
+                  Discovery and setup. Claude installed across the team. Data
+                  connections established. Lisa walks us through her processes.
+                  Workflow inventory signed off.
                 </p>
               </div>
               <div class="tline-mark">
@@ -1956,9 +2055,9 @@
                 <div class="week">Weeks 7&ndash;10</div>
                 <div class="when">30 June &rarr; 27 July</div>
                 <p>
-                  Compliance tracker live. Lease report engine built. Meeting
-                  capture flowing into the CPR Wiki. Phase 2 candidates scoped
-                  with Neil.
+                  Compliance register live. Lease abstracting service
+                  operational. Meeting capture flowing into the CPR Wiki. Phase
+                  2 candidates scoped with Neil.
                 </p>
               </div>
               <div class="tline-mark">
@@ -2011,12 +2110,12 @@
             <div class="term">3 months · fixed · one day per week</div>
             <ul>
               <li>Foundation &amp; Discovery (Wks 1&ndash;2)</li>
-              <li>Priority Workflow Build (Wks 3&ndash;10)</li>
+              <li>Priority Workflow Delivery (Wks 3&ndash;10)</li>
               <li>Training, Handover, Roadmap (Wks 11&ndash;13)</li>
-              <li>Invoicing engine</li>
+              <li>Automated invoicing service</li>
               <li>Cash-in reconciliation</li>
-              <li>Compliance tracker</li>
-              <li>Lease report engine</li>
+              <li>Compliance register</li>
+              <li>Lease abstracting service</li>
               <li>CPR Wiki + workflow inventory</li>
               <li>SOPs for every automation</li>
               <li>No ongoing commitment</li>
@@ -2064,9 +2163,9 @@
             <p>
               Claude seats c.&pound;18&ndash;100 per user per month depending on
               usage. Meeting recording (Circle Back or equivalent) c.&pound;20
-              per user per month. Any new MCP or API subscriptions, typically
-              negligible. We will recommend the right tier per user during Phase
-              1.
+              per user per month. Any further data-source subscriptions,
+              typically negligible. We will recommend the right tier per user
+              during Phase 1.
             </p>
           </div>
           <div class="ff">
@@ -2117,7 +2216,7 @@
           <div class="num">07</div>
           <h2>
             Your team. <span class="accent">Three Hillway people,</span> with
-            the wider tech bench behind them.
+            the wider Hillway team behind them.
           </h2>
         </div>
 
@@ -2155,8 +2254,8 @@
               Matt founded Hillway in 2024 after 15 years at CPP Property. He
               has been working with Claude in production since early 2025 and
               now runs every Hillway client engagement through it. He owns the
-              AI architecture for CPR — Xero connection, MCP setup, automation
-              pipelines, and the CPR Wiki.
+              AI architecture for CPR — the Xero connection, system
+              integrations, automated workflows and the CPR Wiki.
             </p>
           </div>
           <div class="team-card">
@@ -2172,27 +2271,28 @@
               the automations match how a small commercial agency actually runs
               day-to-day. He works closely with Nikki on the workflows that
               touch service charge, invoicing and tenant statements, and picks
-              up a portion of the day-to-day build alongside Matt and Jamie.
+              up a portion of the day-to-day delivery alongside Matt and Jamie.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== 08 STACK ========== -->
+    <!-- ========== 08 SYSTEMS ========== -->
     <section class="bay" id="stack">
       <div class="bay-inner">
         <div class="bay-head reveal">
           <div class="num">08</div>
           <h2>
-            How we work with <span class="accent">your existing stack.</span>
+            Working alongside
+            <span class="accent">the systems CPR already uses.</span>
           </h2>
         </div>
 
         <p class="bay-lead reveal">
-          We will not push you onto a new property management platform.
-          Re-Leased and the King Speed proposal are not the answer here — the
-          answer is automation around the tools you already trust.
+          We will not push CPR onto a new property management system. Re-Leased
+          and the King Speed proposal are not the answer here — the answer is
+          automation around the tools you already trust.
         </p>
 
         <div class="stack reveal">
@@ -2200,9 +2300,9 @@
             <div class="system">Xero</div>
             <div class="role">Accounting · Phase 1 migration</div>
             <p>
-              You&rsquo;re not on a connected accounting platform yet &mdash;
-              Lisa runs invoicing from Word and Excel today. Phase 1 includes
-              the migration to Xero (or Sage if you prefer). Once live, Claude
+              You&rsquo;re not on a connected accounting system yet &mdash; Lisa
+              runs invoicing from Word and Excel today. Phase 1 includes the
+              migration to Xero (or Sage if you prefer). Once live, Claude
               raises invoices, allocates receipts, runs year-end checks and
               produces reports without anyone logging in.
             </p>
@@ -2220,9 +2320,10 @@
             <div class="system">Rightmove &amp; Website</div>
             <div class="role">Listings · Brochures</div>
             <p>
-              Until a Rightmove MCP lands, browser automation populates the
-              back-end from structured property data. Brochures produced in
-              seconds from a single prompt. Burgess legacy agent ID resolved.
+              Until Rightmove publishes a direct interface, browser automation
+              populates the back-end from structured property data. Brochures
+              produced in seconds from a single prompt. The legacy Burgess
+              Commercial agent ID resolved.
             </p>
           </div>
           <div class="col warn">
