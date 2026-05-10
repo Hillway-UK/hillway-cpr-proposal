@@ -1,5 +1,12 @@
 # Generated PDFs — delivered to clients via email, not via public repo
 HPC-*.pdf
 
-# Engagement letter drafts — confidential, not for public Pages
+# Engagement letter, appendices and other client deliverables — confidential, not for public Pages
 HPC-*Engagement-Letter*
+HPC-*Appendix-*
+HPC-*.docx
+HPC-*-DRAFT.md
+
+# macOS / editor noise
+.DS_Store
+~$*
